@@ -7,6 +7,5 @@
 - **Contributing** ([CONTRIBUTING.md](CONTRIBUTING.md)) - Don't know where to start? Our contributing guide details the steps needed to start working on issues and submit great code
 
 ## Learn More
-- **Website** ([conjur.org](conjur.org)): Learn more about who we are, what we do, and what we've
-  made
+- **Website** ([conjur.org](conjur.org)): Learn more about who we are, what we do, and what we've made
 - **Blog** ([blog.conjur.org](blog.conjur.org)): CyberArk's DevOps security blog
