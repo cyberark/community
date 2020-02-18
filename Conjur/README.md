@@ -6,4 +6,4 @@
 
 ## Learn More
 - **Website** (conjur.org): Learn more about who we are, what we do, and what we've made
-- **Blog** (conjur.org/blog): Articles written by memebers of the CyberArk Conjur Team
+- **Blog** (blog.conjur.org): CyberArk's DevOps security blog
