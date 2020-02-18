@@ -1,0 +1,9 @@
+[whitelist]
+files = [
+  "(.*?)(jpg|gif|doc|pdf|bin)$",
+  ".gitleaks.toml",
+]
+
+regex = [ 
+  "(FAKEKEY)+[A-z0-9]*"
+]
