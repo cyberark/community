@@ -5,15 +5,14 @@ get started as a contributor. If you have any questions, please ask us on [Disco
 
 ## Table of Contents
 
-- [Where Do I Start](#where-do-i-start)
-- [Contribution WorkFlow](#contribution-workflow)
-    + [Creating an Issue](#creating-an-issue)
+- [Contributing to the Conjur Open Source Projects](#contributing-to-the-conjur-open-source-projects)
+  * [Where do I start?](#where-do-i-start-)
+  * [Contribution Workflow](#contribution-workflow)
+    + [Reporting an Issue](#reporting-an-issue)
     + [Working on Issues](#working-on-issues)
-- [Git-Flow Guidelines](#git-flow-guidelines)
-- [Testing](#Testing)
-    + [Testing Patterns](#testing-patterns)
-    + [Running Tests](#running-tests)
+  * [Git-flow Guidelines](#git-flow-guidelines)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Where do I start?
 Each Conjur repository has its own `CONTRIBUTING.md` which details how you can get involved with

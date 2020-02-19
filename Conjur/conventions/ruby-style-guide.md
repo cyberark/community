@@ -1,10 +1,15 @@
 # Ruby Style Guide
 
 ## Table of Contents
-- [Ruby Style Guide and Best Practices](#ruby-style-guide-and-best-practices)
-- [Style Baseline](#style-baseline)
-- [Testing](#testing)
-- [Further Reading](#further-reading)
+- [Ruby Style Guide](#ruby-style-guide)
+  * [Table of Contents](#table-of-contents)
+  * [Ruby Style Guide and Best Practices](#ruby-style-guide-and-best-practices)
+  * [Style Baseline](#style-baseline)
+  * [Testing](#testing)
+  * [Further Reading](#further-reading)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Ruby Style Guide and Best Practices
 

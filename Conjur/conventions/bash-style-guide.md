@@ -1,10 +1,14 @@
 # Bash Style Guide
 
 ## Table of Contents
-- [Bash Style Guide and Best Practices](#bash-style-guide-and-best-practices)
+- [Bash Style Guide](#bash-style-guide)
+  * [Bash Style Guide and Best Practices](#bash-style-guide-and-best-practices)
   * [Style Baseline](#style-baseline)
   * [Testing](#testing)
-  * [Further Reading](#further-reading)
+  * [Linting](#linting)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Bash Style Guide and Best Practices
 

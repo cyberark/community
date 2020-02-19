@@ -2,10 +2,16 @@
 ## Git Tips and Tricks
 
 ## Table of Contents
-- [Cleaning Up Your Commit History](#Cleaning-Up-Your-Commit-History)
-- [Interactive Git Rebasing](#interactive-git-rebasing)
+- [Git Tips and Tricks](#git-tips-and-tricks)
+- [Cleaning Up Your Commit History](#cleaning-up-your-commit-history)
+- [Interactive Git rebasing](#interactive-git-rebasing)
 - [Rebasing a feature branch off master](#rebasing-a-feature-branch-off-master)
 - [Preventing Leaks](#preventing-leaks)
+    + [Alternative Hook Configuration: Template Directory](#alternative-hook-configuration--template-directory)
+    + [Custom Gitleaks Config](#custom-gitleaks-config)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Cleaning Up Your Commit History
 
