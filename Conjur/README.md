@@ -1,5 +1,7 @@
 # [CyberArk Conjur](https://github.com/cyberark)
+For a full list of projects and more information about our team, check out our [open source landing page](https://cyberark.github.io/conjur/).
 
+## Table of Contents
 - [CyberArk Conjur](#-cyberark-conjur)
   * [Contributing](#contributing)
   * [Learn More](#learn-more)
