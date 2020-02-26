@@ -6,13 +6,13 @@ can help improve our community experience!
 - [Contributing to the Community Repo](#contributing-to-the-community-repo)
   * [Where Do I Start?](#where-do-i-start-)
   * [Contribution Workflow](#contribution-workflow)
+    + [Finding Issues to Work On](#finding-issues-to-work-on)
     + [Reporting an Issue](#reporting-an-issue)
     + [Working on Issues](#working-on-issues)
-  * [Tips For Making a Project Open to
-    Contributions](#tips-for-making-a-project-open-to-contributions)
+  * [Tips For Making a Project Open to Contributions](#tips-for-making-a-project-open-to-contributions)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
-markdown-toc</a></i></small>
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Where Do I Start?
 
@@ -24,17 +24,26 @@ don't be afraid to be the change you want to see!
 
 ## Contribution Workflow
 Your first step should be checking the `Issues` tab to see if someone else has already created the
-issue. If it has been created, check out the [working on issues](#working-on-issues) section. If it
-hasn't been created, read about [how to report a new issue](#reporting-an-issue!
+issue. If it has been created, check out the [working on issues](#working-on-issues) section, or
+feel free to add additional context or information about the topic. If it hasn't been created, read
+about [how to report a new issue](#reporting-an-issue)!
+
+### Finding Issues to Work On 
+
+1. Click the `Issues` tab on Github to see open issues
+
+1. Select an existing issue and provide the following information in a comment:
+    - State your intention to work on the issue
+    - Provide an outline for your implementation plan  
+
+    This is important to avoid the overlapping of work! 
+
+1. If the issue is already in progress, feel free to ask questions or engage in conversation about
+    the implementation. Otherwise, continue on to [working on issues](#working-on-issues).
 
 ### Reporting an Issue
-1. Click the `Issues` tab on Github to see open issues, and make sure there isn't already a ticket
-   created for your topic.
-    - If the topic *does* exists, feel free to contribute to the conversation! Additional
-      information about a bug or suggestions for implementation of a feature is always welcome.
-    - If the topic *does not* exist, continue through the following steps to create a new issue. 
-
-1. After confirming that the topic doesn't exist, you'll need to click `New Issue` to create it.
+1. After confirming that the topic doesn't already exist, you'll need to click `New Issue` to create
+   it.
 
 1. Select a template, as this will automatically add an appropriate tag and provide additional
    guidelines for what information is required.
@@ -52,19 +61,8 @@ hasn't been created, read about [how to report a new issue](#reporting-an-issue!
 > the [Git Development Workflow](#Git-flow-Guidelines) first, for following best-practices while
 > using source control.
 
-1. Click the `Issues` tab on Github to see open issues 
-
-1. Select an existing issue and provide the following information in a comment:
-    - State your intention to work on the issue
-    - Provide an outline for your implementation plan  
-
-    This is important to avoid the overlapping of work! 
-
-    If the issue is already in progress, feel free to ask questions or engage in conversation about
-    the implementation.
-
-1. After confirming that the issue is not already in progress, add the `Implementing` label to the
-   issue as you begin to work on it.
+1. After receiving confirmation that the issue is not already in progress, add the `Implementing`
+   label to the issue as you begin to work on it.
 
 1. `Fork` the repository locally. Click
    [here](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) for information
