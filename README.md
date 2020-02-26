@@ -7,25 +7,41 @@ in discussion.
 
 - [Cyberark Commons](#cyberark-commons)
   * [Welcome to the CyberArk Community!](#welcome-to-the-cyberark-community-)
-  * [Teams](#teams)
-    + [CyberArk Cloud Solutions](#cyberark-cloud-solutions)
+  * [General Guidelines](#general-guidelines)
+    + [Communicating](#communicating)
+    + [Contributing](#contributing)
+  * [Group-Specific Guidelines](#group-specific-guidelines)
+    + [[CyberArk Cloud Solutions](/Cloud/README.md)](#-cyberark-cloud-solutions---cloud-readmemd-)
       - [What we do](#what-we-do)
       - [Projects we work on](#projects-we-work-on)
-    + [CyberArk Conjur](#cyberark-conjur)
+    + [[CyberArk Conjur](/Conjur/README.md)](#-cyberark-conjur---conjur-readmemd-)
       - [What we do](#what-we-do-1)
       - [Projects we work on](#projects-we-work-on-1)
-    + [CyberArk Labs](#cyberark-labs)
+    + [[CyberArk Labs](/Labs/README.md)](#-cyberark-labs---labs-readmemd-)
       - [What we do](#what-we-do-2)
       - [Projects we work on](#projects-we-work-on-2)
-  * [Communicating](#communicating)
-  * [Contributing](#contributing)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
-markdown-toc</a></i></small>
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-## Teams
-You'll find information detailing contributions guidelines, best practices, and more for each team
-in their respective READMEs.
+## General Guidelines
+
+### Communicating
+Start a conversation with us on [Discourse](https://discuss.cyberarkcommons.org/)
+(discuss.cyberarkcommons.org)! Our CyberArk Commons Discourse is where we share tips and tricks for
+using our products and tools, updates on product changes and design conversations, discuss relevant
+blog posts and articles, and answer your questions. Join us there to find out what we're thinking
+about - we'd be glad to have you as part of our conversation! 
+
+### Contributing
+Many projects in our Github repositories encourage contribution, including this one! To find out
+more, read [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+## Group-Specific Guidelines
+CyberArk publishes many open source projects in https://github.com/cyberark - and there are a few
+primary groups publishing this content who each may have slightly different guidelines for
+contributing. In this section, you can learn more about the projects each group is working on and
+read up on the contribution guidelines that are specific to each group.
 
 ### [CyberArk Cloud Solutions](/Cloud/README.md)
 #### What we do
@@ -76,14 +92,3 @@ Name                                              | Description
 [NetRay](https://github.com/cyberark/NetRay)      | A modular, python tool that detects attacks against the Kerberos protocol. 
 [KDSnap](https://github.com/cyberark/KDSnap)      | KDSnap is a DLL extension for WinDbg that integrates your debugger with your virtualization platform of choice.
 </details>
-
-## Communicating
-Start a conversation with us on [Discourse](https://discuss.cyberarkcommons.org/)
-(discuss.cyberarkcommons.org)! Our CyberArk Commons Discourse is where we share tips and tricks for
-using our products and tools, updates on product changes and design conversations, discuss relevant
-blog posts and articles, and answer your questions. Join us there to find out what we're thinking
-about - we'd be glad to have you as part of our conversation! 
-
-## Contributing
-Many projects in our Github repositories encourage contribution, including this one! To find out
-more, read [CONTRIBUTING.md](CONTRIBUTING.md).
