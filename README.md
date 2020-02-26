@@ -1,19 +1,21 @@
 # Cyberark Commons
 
-## Welcome to the CyberArk Community!
+Welcome to the CyberArk Community!
 
 Consider this your starting point for contributing to CyberArk code, documents, and getting involved
 in discussion.
 
+Here, you'll find both general and team-specific resources that will guide you through the process
+of becoming a contributor to one of our open-source projects!
+
+## Table of Contents
+
 - [Cyberark Commons](#cyberark-commons)
-  * [Welcome to the CyberArk Community!](#welcome-to-the-cyberark-community-)
+  * [Contribute](#contribute)
   * [General Guidelines](#general-guidelines)
     + [Communicating](#communicating)
-    + [Contributing](#contributing)
+  * [Contributing](#contributing)
   * [Group-Specific Guidelines](#group-specific-guidelines)
-    + [CyberArk Cloud Solutions](#cyberark-cloud-solutions)
-      - [What we do](#what-we-do)
-      - [Projects we work on](#projects-we-work-on)
     + [CyberArk Conjur](#cyberark-conjur)
       - [What we do](#what-we-do-1)
       - [Projects we work on](#projects-we-work-on-1)
@@ -21,7 +23,19 @@ in discussion.
       - [What we do](#what-we-do-2)
       - [Projects we work on](#projects-we-work-on-2)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
+markdown-toc</a></i></small>
+
+## Contribute 
+Below, you'll find both general and group-specific guidelines, and lists of projects owned by each
+group. If you don't know where to go first, look through the list of projects and pick any that
+interest you!
+
+From there, check out the [Group-Specific Guidelines](#group-specific-guidelines) for the project
+you'd like to work on, and check our [general-purpose guidelines](CONTRIBUTING.md) for everything
+else.
+
+Questions? [Let's talk!](#communicating)
 
 ## General Guidelines
 
@@ -32,10 +46,10 @@ using our products and tools, updates on product changes and design conversation
 blog posts and articles, and answer your questions. Join us there to find out what we're thinking
 about - we'd be glad to have you as part of our conversation! 
 
-### Contributing
+## Contributing
 Many projects in our Github repositories encourage contribution, including this one! To find out
-more, read [CONTRIBUTING.md](CONTRIBUTING.md).
-
+more about general contribution guidelines shared by most of our projects, read
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Group-Specific Guidelines
 CyberArk publishes many open source projects in https://github.com/cyberark - and there are a few
@@ -43,14 +57,7 @@ primary groups publishing this content who each may have slightly different guid
 contributing. In this section, you can learn more about the projects each group is working on and
 read up on the contribution guidelines that are specific to each group.
 
-### [CyberArk Cloud Solutions](/Cloud/README.md)
-#### What we do
-[Insert description of team responsibilities / identity]
-
-#### Projects we work on 
-[Insert list of projects owned / worked on by team]
-
-### [CyberArk Conjur](/Conjur/README.md)
+### [CyberArk Conjur](Conjur/README.md)
 
 #### What we do
 At [Conjur Open Source](https://conjur.org/), we’re creating the tools to help you build
@@ -65,19 +72,20 @@ worry about secrets again.
 Visit our [Conjur OSS Suite Landing Page](https://cyberark.github.io/conjur/) to view a full list of
 our projects and find helpful resources for learning more about our approach to security!
 
-### [CyberArk Labs](/Labs/README.md)
+### [CyberArk Labs](Labs/README.md)
 
 #### What we do
-The security research groups at Cyberark Labs are busy with studying the attack surface of common and
-emerging technologies. We fuzz, poke, bypass, maneuver, misuse, escalate, hijack, deny service, degrade,
-escape and exploit the technologies, and from time to time we share here new tools you can use to detect
-vulnerabilities and identify threats; based on our research of course.
+The security research groups at Cyberark Labs are busy with studying the attack surface of common
+and emerging technologies. We fuzz, poke, bypass, maneuver, misuse, escalate, hijack, deny service,
+degrade, escape and exploit the technologies, and from time to time we share here new tools you can
+use to detect vulnerabilities and identify threats; based on our research of course.
 
-You can have a look at what we are currently working on right here - https://www.cyberark.com/threat-research-blog/.
+You can have a look at what we are currently working on right here -
+https://www.cyberark.com/threat-research-blog/.
 
 #### Projects we work on 
-We have a variety of projects for analyzing threats and detecting vulnerabilities. Click the dropdown
-below to view and browse them!
+We have a variety of projects for analyzing threats and detecting vulnerabilities. Click the
+dropdown below to view and browse them!
 <details>
   <Summary> View Projects </summary>
 

@@ -1,7 +1,10 @@
 # Contributing to the Community Repo
 
-Whether you're a member of the CyberArk team, or are just getting involved with our community, you
-can help improve our community experience! 
+Whether you're a member of the CyberArk team, or are just getting involved with our community, these
+general-purpose guidelines are meant to help you familiarize yourself with our processes. You can
+use them when working on any of our public projects, including this one!
+
+## Table of Contents
 
 - [Contributing to the Community Repo](#contributing-to-the-community-repo)
   * [Where Do I Start?](#where-do-i-start-)
@@ -9,10 +12,13 @@ can help improve our community experience!
     + [Finding Issues to Work On](#finding-issues-to-work-on)
     + [Reporting an Issue](#reporting-an-issue)
     + [Working on Issues](#working-on-issues)
-  * [Tips For Making a Project Open to Contributions](#tips-for-making-a-project-open-to-contributions)
+    + [Submitting a Pull Request](#submitting-a-pull-request)
+    + [Getting Your Code Reviewed](#getting-your-code-reviewed)
+  * [Tips For Making a Project Open to
+    Contributions](#tips-for-making-a-project-open-to-contributions)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
+markdown-toc</a></i></small>
 
 ## Where Do I Start?
 
@@ -76,10 +82,19 @@ about [how to report a new issue](#reporting-an-issue)!
 1. Run tests as described in the `CONTRIBUTING.md`, or as outlined in the test stage in the
    `Jenkinsfile`, ensuring they pass
 
+### Submitting a Pull Request
 1. Verify that your commit history is clean and organized, and you have rebased on `master` to
    resolve any conflicts. 
 
-1. Submit a `Pull Request` ("`PR`")
+1. Navigate to Githhub and open a `Pull Request` ("`PR`") There are two ways you can do this.
+   1. On the main page of the repo, or in the `Pull Request` tab, select `New Pull Request`.
+   2. If you have recently updated your branch, you should see a notification prompting you to open
+      a new pull request from your branch, click the button beside the notification that says `New
+      Pull Request`.
+
+1. Make sure you're requesting a merge into `master` from your branch
+
+1. Add a title and a description
     + Add a title to the PR that describes what the set of changes included in the PR accomplishes,
       as well as a reference to the issue it addresses, if an issue exists. The PR title should be
       clear, specific, and succinct.
@@ -100,8 +115,52 @@ about [how to report a new issue](#reporting-an-issue)!
       listed by a template, and linking the original issue in the description, e.g.
         > Connected to #[Issue Number]
 
-1. Add the `Implemented` or `In Review` label to the issue, and ask a maintainer to review your
-   code.
+1. Add the `Implemented` or `In Review` label to the issue
+
+1. Tag a reviewer if any are recommended in the righthand menu.
+
+1. Submit the Pull-Request
+
+### Getting Your Code Reviewed
+Once your pull-request has been submitted for review, a reviewer will look for a few things.
+
+- A maintainer will verify that any contributor license agreements have been met. Required
+  contributor license agreements (if any) are usually documented in the repo's CONTRIBUTING.md.
+
+- A maintainer will review your code, and verify that it addresses the issue sufficiently while
+  meeting the contribution guidelines or style patterns for the project.
+
+  Here are a few things a reviewer may look for.
+   - Has the branch author done a good job cleaning up the commit history?
+   - Has the branch been rebased against master?
+   - Has the code been thoroughly tested? 
+      - Have you ran any unit or integration tests, and made note of it in the pull-request
+        description?
+      - Have you performed any manual or non-standard tests, and made note of them in the
+        pull-request description?
+   - Does this pull-request require an update to any existing documentation? 
+      - If so, does an issue need to be made for updating the documentation?
+   - Is the code written in a way that is consistent with the existing code base?
+
+- The maintainer will finalize their review 
+   - If a reviewer notices an issue with your pull-request, such as those listed above, they will
+     request changes be made. You may need to go back and fix a thing or two before it can be
+     approved. 
+   - If any of the reviewer's feedback is optional, it will be clearly marked "Not required" or
+     "nit". It might still be worth addressing, if you can.
+
+- Respond directly to any comments with any of your questions or concerns.
+
+- After making any changes, required or otherwise, make sure your commit history is still organized,
+  and make sure you have recently rebased off of master. 
+
+- If changes were requested, you can prompt for a re-review at the bottom of your pull-request's
+  page in Github. Otherwise, you can click the 're-review' icon beside the reviewers name on the
+  righthand side of your pull-request page.
+
+- From here you will engage in conversation with the reviewer(s) until they are satisfied with the
+  branch state, and confirm that it is ready to merge into master. Once the PR is approved (Marked
+  as "Approved" in Github), you are ready to merge your changes!
 
 ## Tips For Making a Project Open to Contributions
 Since standards for contribution can vary from project to project, it's beneficial to use the
