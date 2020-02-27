@@ -68,11 +68,16 @@ our projects and find helpful resources for learning more about our approach to 
 ### [CyberArk Labs](/Labs/README.md)
 
 #### What we do
-[Insert description of team responsibilities / identity]
+The security research groups at Cyberark Labs are busy with studying the attack surface of common and
+emerging technologies. We fuzz, poke, bypass, maneuver, misuse, escalate, hijack, deny service, degrade,
+escape and exploit the technologies, and from time to time we share here new tools you can use to detect
+vulnerabilities and identify threats; based on our research of course.
+
+You can have a look at what we are currently working on right here - https://www.cyberark.com/threat-research-blog/.
 
 #### Projects we work on 
-We have a variety of projects for analyzing threats and detecting vulnerabilities with privileged
-accounts, click the dropdown below to view and browse them!
+We have a variety of projects for analyzing threats and detecting vulnerabilities. Click the dropdown
+below to view and browse them!
 <details>
   <Summary> View Projects </summary>
 
