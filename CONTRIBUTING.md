@@ -6,16 +6,15 @@ use them when working on any of our public projects, including this one!
 
 ## Table of Contents
 
-- [Contributing to the Community Repo](#contributing-to-the-community-repo)
-  * [Where Do I Start?](#where-do-i-start-)
-  * [Contribution Workflow](#contribution-workflow)
-    + [Finding Issues to Work On](#finding-issues-to-work-on)
-    + [Reporting an Issue](#reporting-an-issue)
-    + [Working on Issues](#working-on-issues)
-    + [Submitting a Pull Request](#submitting-a-pull-request)
-    + [Getting Your Code Reviewed](#getting-your-code-reviewed)
-  * [Tips For Making a Project Open to
-    Contributions](#tips-for-making-a-project-open-to-contributions)
+* [Where Do I Start?](#where-do-i-start-)
+* [Contribution Workflow](#contribution-workflow)
+   + [Finding Issues to Work On](#finding-issues-to-work-on)
+   + [Reporting an Issue](#reporting-an-issue)
+   + [Working on Issues](#working-on-issues)
+   + [Submitting a Pull Request](#submitting-a-pull-request)
+   + [Getting Your Code Reviewed](#getting-your-code-reviewed)
+* [For Maintainers: Tips For Making a Project Open to
+   Contributions](#tips-for-making-a-project-open-to-contributions)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
 markdown-toc</a></i></small>
@@ -34,18 +33,6 @@ issue. If it has been created, check out the [working on issues](#working-on-iss
 feel free to add additional context or information about the topic. If it hasn't been created, read
 about [how to report a new issue](#reporting-an-issue)!
 
-### Finding Issues to Work On 
-
-1. Click the `Issues` tab on Github to see open issues
-
-1. Select an existing issue and provide the following information in a comment:
-    - State your intention to work on the issue
-    - Provide an outline for your implementation plan  
-
-    This is important to avoid the overlapping of work! 
-
-1. If the issue is already in progress, feel free to ask questions or engage in conversation about
-    the implementation. Otherwise, continue on to [working on issues](#working-on-issues).
 
 ### Reporting an Issue
 1. After confirming that the topic doesn't already exist, you'll need to click `New Issue` to create
@@ -62,7 +49,21 @@ about [how to report a new issue](#reporting-an-issue)!
 
 1. Continue to monitor the issue for responses and engage in conversation until resolved
 
+### Finding Issues to Work On 
+
+1. Click the `Issues` tab on Github to see open issues
+
+1. Select an existing issue and provide the following information in a comment:
+    - State your intention to work on the issue
+    - Provide an outline for your implementation plan  
+
+    This is important to avoid the overlapping of work! 
+
+1. If the issue is already in progress, feel free to ask questions or engage in conversation about
+    the implementation. Otherwise, continue on to [working on issues](#working-on-issues).
+
 ### Working on Issues
+
 > Note: In addition to understanding the high-level workflow for issues, it is important to review
 > the [Git Development Workflow](#Git-flow-Guidelines) first, for following best-practices while
 > using source control.
@@ -161,6 +162,18 @@ Once your pull-request has been submitted for review, a reviewer will look for a
 - From here you will engage in conversation with the reviewer(s) until they are satisfied with the
   branch state, and confirm that it is ready to merge into master. Once the PR is approved (Marked
   as "Approved" in Github), you are ready to merge your changes!
+
+## Contributing to this project
+We want to provide our community with the best possible experience when they choose to contribute to
+one of our projects. That means constant improvements to this project and the documentation therein.
+
+
+Looking through [issues for this project](https://github.com/cyberark/community/issues) is a great
+way to see what we're doing to improve the community experience, and to see what we're planning for
+the future. 
+
+If you have an idea for something that could be added or improved, feel free to submit an issue
+yourself!
 
 ## Tips For Making a Project Open to Contributions
 Since standards for contribution can vary from project to project, it's beneficial to use the

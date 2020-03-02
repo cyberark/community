@@ -1,20 +1,22 @@
 # Contributing to the Conjur Open Source Projects
 
-Thanks for your interest in Conjur Open Source! This document serves as a general guide for how to
-get started as a contributor. If you have any questions, please ask us on
-[Discourse](https://discuss.cyberarkcommons.org)!
+Thanks for your interest in Conjur Open Source! 
 
-## Table of Contents
-- [Contributing to the Conjur Open Source
-  Projects](#contributing-to-the-conjur-open-source-projects)
-  * [Before You Get Started](#before-you-get-started)
-    + [Sign the CLA](#sign-the-cla)
-    + [Read the Code of Conduct](#read-the-code-of-conduct)
-    + [Find Something to Work On](#find-something-to-work-on)
-  * [Start Contributing](#start-contributing)
-    + [Reporting an Issue](#reporting-an-issue)
-    + [Working on Issues](#working-on-issues)
-    + [Submitting Pull Requests](#submitting-pull-requests)
+This document serves as a general guide for how to get started as a contributor. If you have any
+questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
+
+# Table of Contents 
+
+* [Before You Get Started](#before-you-get-started)
+  + [Review the contributor license agreements](#review-the-contributor-license-agreements)
+  + [Read the Code of Conduct](#read-the-code-of-conduct)
+* [Start Contributing](#start-contributing)
+  + [Reporting an Issue](#reporting-an-issue)
+  + [Contributing to Code](#contributing-to-code)
+    - [Find Something to Work On](#find-something-to-work-on)
+    - [Working on Issues](#working-on-issues)
+  + [Submitting Pull Requests](#submitting-pull-requests)
+* [Appendix](#appendix)
   * [Git-flow Guidelines](#git-flow-guidelines)
   * [Open Source Guidelines](#open-source-guidelines)
     + [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
@@ -25,78 +27,81 @@ get started as a contributor. If you have any questions, please ask us on
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
 markdown-toc</a></i></small>
 
+
 ## Before You Get Started
 
-### Sign the CLA
-Before your code can be approved, please read our [CLA](#open-source-guidelines) to ensure you're
-compliant with our contributor license agreements.
+### Review the contributor license agreements
+Before your code can be approved, please read our [CLA guide](#open-source-guidelines) to ensure
+you're compliant with our contributor license agreements, which includes:
+
+- [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
+- [When the Repo Does Not Include the CLA](#when-the-repo-does-not-include-the-cla)
 
 ### Read the Code of Conduct
 Please familiarize yourself with our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-### Find Something to Work On
+## Start Contributing
+
+### Reporting an Issue
+An important part of contributing is adding your experience and perspective to the conversation.
+Maybe you've found an issue, or have additional information for an existing issue. In either case,
+your voice matters, and we always value your input. 
+
+Please read our general guidelines on [reporting an issue](/CONTRIBUTING.md#reporting-an-issue) for
+more information
+
+### Contributing to Code 
+
+#### Find Something to Work On
 
 1. Check out [our projects](cyberark.github.io/conjur) to find more information about the tools and
    integrations we're building, and pick one that interests you.
 
-1. Find an issue you'd like to work on using [this
-   guide](/CONTRIBUTING.md#finding-issues-to-work-on).
+1. [Choose an issue](/CONTRIBUTING.md#finding-issues-to-work-on) in that project.
 
-1. Locate the `CONTRIBUTING.md` doc for the project. Typically this file can be found in the
-   top-level directory of the project; for example, see the [Secretless Broker
-   CONTRIBUTING.md](https://github.com/cyberark/secretless-broker/blob/master/CONTRIBUTING.md). For
-   any project, reading this file is the best starting point for contributing, but if no
-   `CONTRIBUTING.md` can be found, please feel free to [create an
-   issue](/CONTRIBUTING.md#reporting-an-issue) or [submit a PR](/CONTRIBUTING.md#working-on-issues)
-   to create one!
+1. Locate the project's CONTRIBUTING.md file, which documents contribution guidelines and in
+   particular details the steps required to run, build, and test the project. There are usually
+   development prerequisites in these guides that are important for getting set up. Can't find a
+   project's CONTRIBUTING.md? Please create an issue or submit a PR to create one!
 
-   > Note: Some general-purpose guidelines are used across multiple projects, and can be found
-   > [here](/CONTRIBUTING.md).
-
-1. Check the project-specific contributing guide for steps for running, building, and testing the
-   project. There are usually  prerequisites for installation and setup in these guides that are
-   important for getting set up. 
-
-## Start Contributing
-Now that you've chosen an project and an issue, and have familiarized yourself with the
-project-specific contribution guide, you're ready to start contributing! It's recommended to refer
-to the project-specific contribution guide for most things, but here are some general-purpose
-workflow steps to refer to.
-
-### Reporting an Issue
-Refer to our general guidelines for [reporting an issue](/CONTRIBUTING.md#reporting-an-issue)
-
-### Working on Issues
+#### Working on Issues
 > Note: In addition to understanding the high-level workflow for issues, it is important to review
 > our [Git Development Workflow](#Git-flow-Guidelines) first, for following best-practices while
 > using source control.
 
-Refer to our general guidelines for [working on issues](/CONTRIBUTING.md#working-on-issues)
+Now that you've chosen a project and an issue and have familiarized yourself with the
+project-specific contribution guide, you're ready to start contributing! If you're not sure which
+steps to take to get a local copy of the code and start working, you can refer to our general
+guidelines for [working on an issue](/CONTRIBUTING.md#working-on-issues) for guidance.
 
-### Submitting Pull Requests
-Refer to our general guidelines for [Code Reviews](/CONTRIBUTING.md#code-reviews)
+#### Submitting Pull Requests
+Once you've completed the work to resolve the issue and ensured your changes are tested
+appropriately, it's time to submit your changes for review. Find out more about submitting your PRs
+and getting them merged in our [code review guidelines](/CONTRIBUTING.md#code-reviews).
+
+## Appendix 
 
 ## Git-flow Guidelines
 The following guidelines are used to maintain a clean and consistent source control history, and are
 important to follow when developing.
 
-- Avoid branching off of branches
+- Avoid branching off of branches.
     + Branching off of branches can muddle your git history, or make things harder to track and
       maintain when the parent branch changes.
     + It is recommended to implement features in small enough chunks that they can exist
       independently of one another, and only branching off of master.
 
-- Rebase over merging
+- Rebase instead of merging.
     + Before you push your changes to the remote server you should rebase against the remote master
       branch.
     + Rebasing onto master ensures the master branch will have a well-organized and linear commit
       history and also gives you an opportunity to immediately fix any conflicts between your branch
-      and the master branch before beginning a code review
+      and the master branch before beginning a code review.
     + Merging makes cherry-picking mostly impossible, history navigation cumbersome, and bisection
-      extremely difficult - so we always choose rebasing instead
-    + This applies to feature branches as well as the local copy of remote branches
+      extremely difficult - so we always choose rebasing instead.
+    + This applies to feature branches as well as the local copy of remote branches.
 
-- Maintain a clean commit history
+- Maintain a clean commit history.
     + A commit should have a concise title, a description of the changes contained within, and
       should be a self-contained feature.
     + It's totally fine to have multiple commits in a single branch or PR, as long as they are
@@ -105,7 +110,7 @@ important to follow when developing.
       rebasing on the master branch frequently, which can retroactively remove these commits.
     + For help, use [this](conventions/git-tips-and-tricks#Cleaning-Up-Your-Commit-History) guide.
 
-- Install Gitleaks to avoid leaking credentials and secure information
+- Install Gitleaks to avoid leaking credentials and secure information.
     + Follow [these steps](conventions/git-tips-and-tricks.md#preventing-leaks) to set up and use
       Gitleaks to avoid credential leaks
 

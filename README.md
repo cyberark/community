@@ -6,50 +6,48 @@ Consider this your starting point for contributing to CyberArk code, documents, 
 in discussion.
 
 Here, you'll find both general and team-specific resources that will guide you through the process
-of becoming a contributor to one of our open-source projects!
+of becoming a contributor to one of our open-source projects.
 
 ## Table of Contents
 
-- [Cyberark Commons](#cyberark-commons)
-  * [Contribute](#contribute)
-  * [General Guidelines](#general-guidelines)
-    + [Communicating](#communicating)
-  * [Contributing](#contributing)
-  * [Group-Specific Guidelines](#group-specific-guidelines)
-    + [CyberArk Conjur](#cyberark-conjur)
-      - [What we do](#what-we-do-1)
-      - [Projects we work on](#projects-we-work-on-1)
-    + [CyberArk Labs](#cyberark-labs)
-      - [What we do](#what-we-do-2)
-      - [Projects we work on](#projects-we-work-on-2)
+* [General Guidelines](#general-guidelines)
+  + [Communicating](#communicating)
+  + [Contributing](#contributing)
+* [Group-Specific Guidelines](#group-specific-guidelines)
+  + [CyberArk Conjur](#cyberark-conjur)
+    - [What we do](#what-we-do-1)
+    - [Projects we work on](#projects-we-work-on-1)
+  + [CyberArk Labs](#cyberark-labs)
+    - [What we do](#what-we-do-2)
+    - [Projects we work on](#projects-we-work-on-2)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
 markdown-toc</a></i></small>
 
-## Contribute 
-Below, you'll find both general and group-specific guidelines, and lists of projects owned by each
-group. If you don't know where to go first, look through the list of projects and pick any that
-interest you!
-
-From there, check out the [Group-Specific Guidelines](#group-specific-guidelines) for the project
-you'd like to work on, and check our [general-purpose guidelines](CONTRIBUTING.md) for everything
-else.
-
-Questions? [Let's talk!](#communicating)
-
 ## General Guidelines
 
 ### Communicating
-Start a conversation with us on [Discourse](https://discuss.cyberarkcommons.org/)
-(discuss.cyberarkcommons.org)! Our CyberArk Commons Discourse is where we share tips and tricks for
-using our products and tools, updates on product changes and design conversations, discuss relevant
-blog posts and articles, and answer your questions. Join us there to find out what we're thinking
-about - we'd be glad to have you as part of our conversation! 
+Start a conversation with us on [Discourse](https://discuss.cyberarkcommons.org/)! 
+
+Our CyberArk Commons Discourse is where we share tips and tricks for using our products and tools,
+updates on product changes and design conversations, discuss relevant blog posts and articles, and
+answer your questions. Join us there to find out what we're thinking about - we'd be glad to have
+you as part of our conversation! 
 
 ## Contributing
-Many projects in our Github repositories encourage contribution, including this one! To find out
-more about general contribution guidelines shared by most of our projects, read
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Many projects in our Github repositories encourage contribution, even this one! Our [contributor's
+guide](CONTRIBUTING.md) contains information on:
+
+  1. [Reporting an Issue](CONTRIBUTING.md/#reporting-an-issue)
+  1. [Finding Issues to Work On](CONTRIBUTING.md/#finding-issues-to-work-on)
+  1. [Working on Issues](CONTRIBUTING.md/#working-on-issues)
+  1. [Submitting a Pull Request](CONTRIBUTING.md/#submitting-a-pull-request)
+
+If you already know which project you'd like to work on, check out the [Group-Specific
+Guidelines](#group-specific-guidelines) to learn more about additional tips and tricks as
+you get started.
+
+Questions? [Let's talk!](#communicating)
 
 ## Group-Specific Guidelines
 CyberArk publishes many open source projects in https://github.com/cyberark - and there are a few
