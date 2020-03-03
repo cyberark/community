@@ -1,1 +1,0 @@
-# CyberArk Cloud Solutions

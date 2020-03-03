@@ -14,6 +14,7 @@ get started as a contributor. If you have any questions, please ask us on
   * [Start Contributing](#start-contributing)
     + [Reporting an Issue](#reporting-an-issue)
     + [Working on Issues](#working-on-issues)
+    + [Submitting Pull Requests](#submitting-pull-requests)
   * [Git-flow Guidelines](#git-flow-guidelines)
   * [Open Source Guidelines](#open-source-guidelines)
     + [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
@@ -71,6 +72,9 @@ Refer to our general guidelines for [reporting an issue](/CONTRIBUTING.md#report
 > using source control.
 
 Refer to our general guidelines for [working on issues](/CONTRIBUTING.md#working-on-issues)
+
+### Submitting Pull Requests
+Refer to our general guidelines for [Code Reviews](/CONTRIBUTING.md#code-reviews)
 
 ## Git-flow Guidelines
 The following guidelines are used to maintain a clean and consistent source control history, and are
