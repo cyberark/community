@@ -13,6 +13,7 @@ use them when working on any of our public projects, including this one!
    + [Working on Issues](#working-on-issues)
    + [Submitting a Pull Request](#submitting-a-pull-request)
    + [Getting Your Code Reviewed](#getting-your-code-reviewed)
+* [Contributing to this project](#contributing-to-this-project)
 * [For Maintainers: Tips For Making a Project Open to
    Contributions](#tips-for-making-a-project-open-to-contributions)
 
