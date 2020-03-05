@@ -15,7 +15,7 @@ questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
   + [Contributing to Code](#contributing-to-code)
     - [Find Something to Work On](#find-something-to-work-on)
     - [Working on Issues](#working-on-issues)
-  + [Submitting Pull Requests](#submitting-pull-requests)
+    - [Submitting Pull Requests](#submitting-pull-requests)
 * [Appendix](#appendix)
   * [Git-flow Guidelines](#git-flow-guidelines)
   * [Open Source Guidelines](#open-source-guidelines)
@@ -32,13 +32,14 @@ markdown-toc</a></i></small>
 
 ### Review the contributor license agreements
 Before your code can be approved, please read our [CLA guide](#open-source-guidelines) to ensure
-you're compliant with our contributor license agreements, which includes:
+you're compliant with our contributor license agreements, which includes instructions for:
 
 - [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
 - [When the Repo Does Not Include the CLA](#when-the-repo-does-not-include-the-cla)
 
 ### Read the Code of Conduct
-Please familiarize yourself with our [Code of Conduct](CODE_OF_CONDUCT.md).
+Please familiarize yourself with our [Code of Conduct](CODE_OF_CONDUCT.md, which details our
+community guidelines and provides instructions for how to get in touch to report violations.
 
 ## Start Contributing
 
