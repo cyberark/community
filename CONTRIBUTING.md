@@ -25,7 +25,7 @@ As you visit the various guides and documents throughout this repository, you ma
 that you feel is missing, or perhaps you feel it could be improved in some way. This documentation
 is used by a wide variety of community members, it's important to us that we are as clear and
 thorough as possible, so your perspective is important! Your feedback can help countless others, so
-don't be afraid to be the change you want to see! 
+don't be afraid to be the change you want to see!
 
 ## Contribution Workflow
 Your first step should be checking the `Issues` tab to see if someone else has already created the
@@ -49,7 +49,7 @@ about [how to report a new issue](#reporting-an-issue)!
 
 1. Continue to monitor the issue for responses and engage in conversation until resolved
 
-### Finding Issues to Work On 
+### Finding Issues to Work On
 
 1. Click the `Issues` tab on Github to see open issues
 
@@ -57,45 +57,42 @@ about [how to report a new issue](#reporting-an-issue)!
     - State your intention to work on the issue
     - Provide an outline for your implementation plan  
 
-    This is important to avoid the overlapping of work! 
+    This is important to avoid the overlapping of work!
 
 1. If the issue is already in progress, feel free to ask questions or engage in conversation about
     the implementation. Otherwise, continue on to [working on issues](#working-on-issues).
 
 ### Working on Issues
 
-> Note: In addition to understanding the high-level workflow for issues, it is important to review
-> the [Git Development Workflow](#Git-flow-Guidelines) first, for following best-practices while
-> using source control.
-
 1. After receiving confirmation that the issue is not already in progress, add the `Implementing`
    label to the issue as you begin to work on it.
 
-1. `Fork` the repository locally. Click
-   [here](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) for information
-   on how to fork.
+1. [Fork the project](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-1. Create a feature branch to store your changes, using `[Issue Number]-[Name-Of-Issue], e.g.
-    > 1004-add-emoji-support
+1. [Clone your fork](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
-1. Make your changes!
+1. Make local changes to your fork by editing files.
 
-1. Run tests as described in the `CONTRIBUTING.md`, or as outlined in the test stage in the
-   `Jenkinsfile`, ensuring they pass
+1. Run tests as described in the `CONTRIBUTING.md` or as outlined in the test stage(s) in the
+   `Jenkinsfile`, ensuring they pass.
+
+1. [Commit your changes](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
 ### Submitting a Pull Request
-1. Verify that your commit history is clean and organized, and you have rebased on `master` to
-   resolve any conflicts. 
 
-1. Navigate to Githhub and open a `Pull Request` ("`PR`") There are two ways you can do this.
-   1. On the main page of the repo, or in the `Pull Request` tab, select `New Pull Request`.
-   2. If you have recently updated your branch, you should see a notification prompting you to open
-      a new pull request from your branch, click the button beside the notification that says `New
-      Pull Request`.
+1. Once you have wrapped up your work, you should verify that your commit history is
+   [clean and organized](https://www.conjur.org/blog/cleaning-history-for-github-prs/).
 
-1. Make sure you're requesting a merge into `master` from your branch
+1. [Sync your fork with the upstream repository](https://gist.github.com/ravibhure/a7e0918ff4937c9ea1c456698dcd58aa)
+   and resolve any conflicts.
 
-1. Add a title and a description
+1. [Push your local changes to the remote server](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository).
+
+1. Navigate to Githhub and [open a `Pull Request`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) ("`PR`").
+
+1. Make sure you're requesting a merge into `master` of the upstream project from your fork.
+
+1. Add a PR title and description.
     + Add a title to the PR that describes what the set of changes included in the PR accomplishes,
       as well as a reference to the issue it addresses, if an issue exists. The PR title should be
       clear, specific, and succinct.
@@ -116,11 +113,11 @@ about [how to report a new issue](#reporting-an-issue)!
       listed by a template, and linking the original issue in the description, e.g.
         > Connected to #[Issue Number]
 
-1. Add the `Implemented` or `In Review` label to the issue
+1. Add the `Implemented` label to the issue.
 
 1. Tag a reviewer if any are recommended in the righthand menu.
 
-1. Submit the Pull-Request
+1. Submit the Pull-Request.
 
 ### Getting Your Code Reviewed
 Once your pull-request has been submitted for review, a reviewer will look for a few things.
@@ -134,26 +131,26 @@ Once your pull-request has been submitted for review, a reviewer will look for a
   Here are a few things a reviewer may look for.
    - Has the branch author done a good job cleaning up the commit history?
    - Has the branch been rebased against master?
-   - Has the code been thoroughly tested? 
+   - Has the code been thoroughly tested?
       - Have you ran any unit or integration tests, and made note of it in the pull-request
         description?
       - Have you performed any manual or non-standard tests, and made note of them in the
         pull-request description?
-   - Does this pull-request require an update to any existing documentation? 
+   - Does this pull-request require an update to any existing documentation?
       - If so, does an issue need to be made for updating the documentation?
    - Is the code written in a way that is consistent with the existing code base?
 
-- The maintainer will finalize their review 
+- The maintainer will finalize their review
    - If a reviewer notices an issue with your pull-request, such as those listed above, they will
      request changes be made. You may need to go back and fix a thing or two before it can be
-     approved. 
+     approved.
    - If any of the reviewer's feedback is optional, it will be clearly marked "Not required" or
      "nit". It might still be worth addressing, if you can.
 
 - Respond directly to any comments with any of your questions or concerns.
 
 - After making any changes, required or otherwise, make sure your commit history is still organized,
-  and make sure you have recently rebased off of master. 
+  and make sure you have recently rebased off of master.
 
 - If changes were requested, you can prompt for a re-review at the bottom of your pull-request's
   page in Github. Otherwise, you can click the 're-review' icon beside the reviewers name on the
@@ -167,10 +164,9 @@ Once your pull-request has been submitted for review, a reviewer will look for a
 We want to provide our community with the best possible experience when they choose to contribute to
 one of our projects. That means constant improvements to this project and the documentation therein.
 
-
 Looking through [issues for this project](https://github.com/cyberark/community/issues) is a great
 way to see what we're doing to improve the community experience, and to see what we're planning for
-the future. 
+the future.
 
 If you have an idea for something that could be added or improved, feel free to submit an issue
 yourself!
@@ -187,7 +183,7 @@ following tips to make that information easy to find, and easy to use.
    is created, and pointed to by the top-level README.md of the project. </br> A good
    CONTRIBUTING.md has the following:
     - A reference to this community repo for general guidelines
-    - Where to find issues 
+    - Where to find issues
     - How to report new issues
     - How to work on issues
     - Standards for writing in the project-specific language
