@@ -1,11 +1,11 @@
 # Contributing to the Conjur Open Source Projects
 
-Thanks for your interest in Conjur Open Source! 
+Thanks for your interest in Conjur Open Source!
 
 This document serves as a general guide for how to get started as a contributor. If you have any
 questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
 
-# Table of Contents 
+# Table of Contents
 
 * [Before You Get Started](#before-you-get-started)
   + [Review the contributor license agreements](#review-the-contributor-license-agreements)
@@ -46,12 +46,12 @@ community guidelines and provides instructions for how to get in touch to report
 ### Reporting an Issue
 An important part of contributing is adding your experience and perspective to the conversation.
 Maybe you've found an issue, or have additional information for an existing issue. In either case,
-your voice matters, and we always value your input. 
+your voice matters, and we always value your input.
 
 Please read our general guidelines on [reporting an issue](/CONTRIBUTING.md#reporting-an-issue) for
 more information
 
-### Contributing to Code 
+### Contributing to Code
 
 #### Find Something to Work On
 
@@ -80,7 +80,7 @@ Once you've completed the work to resolve the issue and ensured your changes are
 appropriately, it's time to submit your changes for review. Find out more about submitting your PRs
 and getting them merged in our [code review guidelines](/CONTRIBUTING.md#code-reviews).
 
-## Appendix 
+## Appendix
 
 ## Git-flow Guidelines
 The following guidelines are used to maintain a clean and consistent source control history, and are
@@ -155,15 +155,15 @@ When signing, every commit must be signed, and your PR will not be approved unti
 To sign-off, use:
 
     git commit --signoff
-or 
+or
 
     git commit -s
 
 Alternatively, if you have already made the commit, you may use:
 
-    git commit --amend --signoff 
-or 
-    
+    git commit --amend --signoff
+or
+
     git commit --amend -s
 
 After amending a commit, you will need to force-push (`push -f`) to your branch for this to take
