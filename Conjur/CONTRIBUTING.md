@@ -16,11 +16,17 @@ questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
     - [Find Something to Work On](#find-something-to-work-on)
     - [Working on Issues](#working-on-issues)
     - [Submitting Pull Requests](#submitting-pull-requests)
+* [Release Process](#release-process)
 * [Appendix](#appendix)
   * [Git-flow Guidelines](#git-flow-guidelines)
   * [Changelog Guidelines](#changelog-guidelines)
     + [Changelog Format](#changelog-format)
     + [Changelog Content](#changelog-content)
+  * [Tagging](#tagging)
+  * [GitHub Releases](#github-releases)
+    + [Draft Release Creation](#draft-release-creation)
+    + [Pre-release Publishing](#pre-release-publishing)
+    + [Release Publishing](#release-publishing)
   * [Open Source Guidelines](#open-source-guidelines)
     + [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
     + [When the Repo Does Not Include the CLA](#when-the-repo-does-not-include-the-cla)
@@ -90,6 +96,21 @@ to learn about how to maintain this file.
 Once you've completed the work to resolve the issue and ensured your changes are tested
 appropriately, it's time to submit your changes for review. Find out more about submitting your PRs
 and getting them merged in our [code review guidelines](/CONTRIBUTING.md#code-reviews).
+
+## Release Process
+
+Our release process generally follows this pattern for most projects:
+
+1. The maintainers agree that a release should be made from current work on default branch. This
+   may include 1 or more individuals and can include input from project management, product
+   management, technical writers, infrastructure, etc.
+2. [**Annotated** git tag is created](#tagging).
+3. [Draft release is created](#draft-release-creation) from that tag.
+4. After some local smoke testing, a [pre-release is published](#pre-release-publishing).
+5. Finally, after some project-dependent amount of user testing, the pre-release is then
+   [published as a regular release](#release-publishing).
+6. (optional) For some components, a bigger suite release is done when enough projects reach a
+   agreed-upon threshold of features that have been tested together.
 
 ## Appendix
 
@@ -244,6 +265,130 @@ To put this all together, below are a few examples of good and bad changelog ent
 - Fixed overrides handling of `Client` account param [org/repo#456](https://github.com/org/repo/issues/456)
 ...
 ```
+
+## Tagging
+
+All projects cyclically get a point where they are ready to package a group of changes as a
+check-pointed release which in most cases is started with creating versions through `git tag`.
+Git tags create special branches that allow for a reproducible and easy-to-understand
+delivery of code that are generally 1:1 mapped with significant feature changes.
+
+In most cases for our projects we use [annotated git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags)
+with the name matching the [`v<semver>` tri-dotted pattern](https://semver.org/) (e.g.
+`v1.2.3`). By doing this, we make finding relevant code and automating releases easy and
+simple. We also use GPG signing of those tags where possible but the infrastructure and
+guidelines for signing tags have not been fully worked out on an official level.
+
+To create an annotated tag you have to:
+- **Check out the default branch (in most cases this is `master`) and/or the commit that you
+  want to tag**. In almost all cases, tags should be created on the default branch for
+  automation purposes as a lot of our deliverables get pushed only when the default branch
+  has a specific tag. This checkout step is somewhat optional as `git tag` can also take
+  in a commit to tag but this procedure is less error-prone vs direct tagging.
+
+  Example of checking out the current upstream main branch history
+  ```sh-session
+  $ git fetch
+  $ git checkout master
+  $ git reset --hard origin/master
+  ```
+- **Verify that the git history looks as expected**. Tools like `git log`, `tig`, `gitk`, and
+  others can help you verify that the history is in the expected state.
+- **Verify that `NOTICES.txt` looks as expected**. This file should include any info
+  that the project may have to comply with legally, including:
+  - Legally required copyright notices
+  - Legally required license texts
+  - Legally required upstream repository links
+  - Any other required legal information about the project and its dependencies
+- **Verify that the `CHANGELOG.md` content looks as expected**. While most repos already
+  have tooling for this included in the CI/CD pipeline, it's always a good idea to verify that:
+  - The [changelog guidelines](#changelog-guiedlines) were followed
+  - And that the tag you are creating has a matching version section in the CHANGELOG
+- **Create the annotated tag**. To create the tag, use the `git tag -a` command. The main tag
+  **must** be in `v<semver>` tri-dotted format:
+  ```sh-session
+  $ # If you don't have a GPG key set up
+  $ git tag -a "v1.2.3" -m "v1.2.3"
+
+  $ # If you do have a GPG key set up
+  $ git tag -s "v1.2.3" -m "v1.2.3"
+  ```
+
+- **Verify that the tag was created correctly**. You can check this easily with `git describe`:
+  ```sh-session
+  $ git describe
+  v1.2.3
+  ```
+  If the version returned by `git describe` does not match your created tag, it was not correctly
+  created.
+- **Push the tag to the upstream repository**. This step makes the tag available to other users
+  of the repo:
+  ```sh-session
+  $ git push origin v1.2.3
+  ```
+
+  > Note: Overwriting or removing old tags is extremely discouraged
+
+## GitHub Releases
+
+GitHub releases are the main way that our users consume some of our end products so it is very
+important that these are maintained 1:1 along with tags.
+
+> **Note: Only full (i.e. not draft or pre-release) GitHub releases are considered for
+> inclusion in the Conjur OSS Suite**
+
+### Draft Release Creation
+
+Once the [tag](#tagging) has been pushed to upstream repository and you are ready to create an
+official release of that tagged version we can go to the GitHub UI to first create a draft release:
+- **Navigate to the releases page**. In GitHub, under `<main_repo_url>/releases` you can find
+  the list of all relases that are available for the repository. We will click the `Draft a new release`
+  in the top right to get us into the "new release" page.
+- **Fill out the relevant release info**. Make sure that:
+  - `Tag version` is the tag you created for this release.
+  - `Release title` matches exactly the tag name (`v<semver>`).
+  - `Describe this release` is populated with changelog entries for this tagged version. You can
+    usually just copy/paste the relevant section from the `CHANGELOG.md` for the version being
+    released. If the version header has a link styling (e.g. `[v1.2.3]`) either set the link to
+    the tag for this release or remove the brackets from that line.
+  - Any files that you may want included this release are attached. This typically includes the
+    `LICENSE.md` file, `CHANGELOG.md` file, `NOTICES.txt`, binary executable (if any), SHA256SUM
+    of the executable artifacts, etc).
+- **Create the draft release**. Check the box `This is a pre-release` and click `Save Draft`
+  which will create a draft release that is not yet visible to the public.
+
+Once the draft release is created it's a good time to triple-check the release and ensure that
+all of the executable files pass a smoke test for their environments. While this is not strictly
+mandatory, it prevents issues with mis-labeled or incompatible binaries.
+
+### Pre-release Publishing
+
+With draft release smoke test completed, we can make a "pre-release" (non-production ready
+release) to let the users know that we have a new release but that we are performing a slow
+rollout in an effort to ensure low impact if any bugs are found in this new release. This
+stage may last as little or as much as needed and it's at the discretion of the maintainers,
+but should be guided by things like: the size of user base, cascading impact for bugs, level
+of automated testing in the repo, risk of changes causing unintended problems, and other
+concerns.
+
+To make a pre-release:
+- **Go to the draft release page**. The draft release can be found under
+  `<main_repo_url>/releases` for your repo.
+- **Publish the pre-release**. Double-check that the `This is a pre-release` is selected and
+  click `Publish release`.
+
+### Release Publishing
+
+After some (project-dependent) assurance that the release meets our stability requirements by
+the developers and users of the pre-released version of the software, the confidence that the
+software works as expected is high. When this stage is reached, we can turn our pre-release
+into a full release:
+- **Go to the pre-release page**. The pre-release can be found under `<main_repo_url>/releases`
+  for your repo.
+- **Publish the release**. Double-check that the `This is a pre-release` is **not** selected
+  and click `Publish release`.
+- **Verify the release publishing**. Ensure that the release is visible in the
+  `<main_repo_url>/releases`.
 
 ## Open Source Guidelines
 
