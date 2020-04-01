@@ -276,8 +276,8 @@ delivery of code that are generally 1:1 mapped with significant feature changes.
 In most cases for our projects we use [annotated git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags)
 with the name matching the [`v<semver>` tri-dotted pattern](https://semver.org/) (e.g.
 `v1.2.3`). By doing this, we make finding relevant code and automating releases easy and
-simple. We also use GPG signing of those tags where possible but the infrastructure and
-guidelines for signing tags have not been fully worked out on an official level.
+simple. We also use GPG signing of those tags where possible, but this can vary across
+projects as our official process for this is still being defined.
 
 To create an annotated tag you have to:
 - **Check out the default branch (in most cases this is `master`) and/or the commit that you
@@ -294,16 +294,20 @@ To create an annotated tag you have to:
   ```
 - **Verify that the git history looks as expected**. Tools like `git log`, `tig`, `gitk`, and
   others can help you verify that the history is in the expected state.
-- **Verify that `NOTICES.txt` looks as expected**. This file should include any info
-  that the project may have to comply with legally, including:
+- **Verify that `NOTICES.txt` looks as expected**. In particular, if the changes in this version
+   have modified the project dependencies, this file likely will need an update. In general, this file
+   includes info to help us comply with the legal requirements of our open source dependencies,
+   including:
   - Legally required copyright notices
   - Legally required license texts
   - Legally required upstream repository links
   - Any other required legal information about the project and its dependencies
 - **Verify that the `CHANGELOG.md` content looks as expected**. While most repos already
   have tooling for this included in the CI/CD pipeline, it's always a good idea to verify that:
-  - The [changelog guidelines](#changelog-guiedlines) were followed
-  - And that the tag you are creating has a matching version section in the CHANGELOG
+  - The [changelog guidelines](#changelog-guidelines) were followed, and
+  - The tag you are creating has a matching version section in the CHANGELOG (e.g. the `Unreleased`
+     changes have been updated to be included in the new version, and there is now an empty
+     `Unreleased` section in the CHANGELOG).
 - **Create the annotated tag**. To create the tag, use the `git tag -a` command. The main tag
   **must** be in `v<semver>` tri-dotted format:
   ```sh-session
