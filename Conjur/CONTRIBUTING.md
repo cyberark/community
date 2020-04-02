@@ -142,14 +142,14 @@ important to follow when developing.
       organized accordingly with their titles, descriptions, and contents.
     + Avoid including `merge master into [your branch name]` commits in your PR. This can be done by
       rebasing on the master branch frequently, which can retroactively remove these commits.
-    + For help, use [this](conventions/git-tips-and-tricks#Cleaning-Up-Your-Commit-History) guide.
+    + For help, use [this](conventions/git-tips-and-tricks.md#Cleaning-Up-Your-Commit-History) guide.
 
 - Install Gitleaks to avoid leaking credentials and secure information.
     + Follow [these steps](conventions/git-tips-and-tricks.md#preventing-leaks) to set up and use
       Gitleaks to avoid credential leaks
 
 For any help with using Git or following these these guidelines, please refer to our [Git Tips and
-Tricks](conventions/git-tips-and-tricks) doc.
+Tricks](conventions/git-tips-and-tricks.md) doc.
 
 ## Changelog Guidelines
 
