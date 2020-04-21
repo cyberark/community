@@ -22,6 +22,11 @@ first issue, to learning best practices surrounding the languages we use.
 
 - **Guidelines** ([CONTRIBUTING.md](CONTRIBUTING.md)) - Don't know where to start? Our
   contributing guide details the steps needed to start working on issues and submitting great code
+    + [Contributor license agreements](CONTRIBUTING.md#review-the-contributor-license-agreements)
+    + [Reporting an issue](CONTRIBUTING.md#reporting-an-issue)
+    + [Contributing to code](CONTRIBUTING.md#contributing-to-code)
+    + [Git workflow guidelines](CONTRIBUTING.md#git-workflow-guidelines)
+    + [Change log guidelines](CONTRIBUTING.md#changelog-guidelines)
 
 - **Code of Conduct** ([CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)) - While we want to create the best
   security software possible, we want to foster security and inclusion in our community as well.
@@ -34,7 +39,7 @@ first issue, to learning best practices surrounding the languages we use.
     + [Bash](conventions/bash-style-guide.md)
 
 ## Learn More
-- **Website** ([conjur.org](conjur.org)) - Visit our website to learn more about
+- **Website** ([conjur.org](https://conjur.org)) - Visit our website to learn more about
   getting started with Conjur, including tutorials and documentation.
 
 - **Blog** ([blog.conjur.org](blog.conjur.org)) - CyberArk's DevOps security blog.
