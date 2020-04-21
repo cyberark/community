@@ -18,7 +18,7 @@ questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
     - [Submitting Pull Requests](#submitting-pull-requests)
 * [Release Process](#release-process)
 * [Appendix](#appendix)
-  * [Git-flow Guidelines](#git-flow-guidelines)
+  * [Git Workflow Guidelines](#git-workflow-guidelines)
   * [Changelog Guidelines](#changelog-guidelines)
     + [Changelog Format](#changelog-format)
     + [Changelog Content](#changelog-content)
@@ -79,7 +79,7 @@ more information
 #### Working on Issues
 
 > Note: In addition to understanding the high-level workflow for issues, it is important to review
-> our [Git Development Workflow](#Git-flow-Guidelines) first, for following best-practices while
+> our [Git Development Workflow](#git-workflow-guidelines) first, for following best-practices while
 > using source control.
 
 Now that you've chosen a project and an issue and have familiarized yourself with the
@@ -114,7 +114,7 @@ Our release process generally follows this pattern for most projects:
 
 ## Appendix
 
-## Git-flow Guidelines
+## Git Workflow Guidelines
 
 The following guidelines are used to maintain a clean and consistent source control history, and are
 important to follow when developing.
