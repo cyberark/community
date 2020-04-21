@@ -66,7 +66,7 @@ more information
 
 #### Find Something to Work On
 
-1. Check out [our projects](cyberark.github.io/conjur) to find more information about the tools and
+1. Check out [our projects](https://cyberark.github.io/conjur) to find more information about the tools and
    integrations we're building, and pick one that interests you.
 
 1. [Choose an issue](/CONTRIBUTING.md#finding-issues-to-work-on) in that project.

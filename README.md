@@ -1,4 +1,4 @@
-# Cyberark Commons
+# CyberArk Commons
 
 Welcome to the CyberArk Community!
 
@@ -73,7 +73,7 @@ our projects and find helpful resources for learning more about our approach to 
 ### [CyberArk Labs](Labs/README.md)
 
 #### What we do
-The security research groups at Cyberark Labs are busy with studying the attack surface of common
+The security research groups at CyberArk Labs are busy with studying the attack surface of common
 and emerging technologies. We fuzz, poke, bypass, maneuver, misuse, escalate, hijack, deny service,
 degrade, escape and exploit the technologies, and from time to time we share here new tools you can
 use to detect vulnerabilities and identify threats; based on our research of course.
