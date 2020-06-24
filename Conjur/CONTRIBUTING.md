@@ -175,18 +175,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Removed
-- Entry about another removed item from codebase ([org/repo#123](https://github.com/org/repo/issues/123))
+- Entry about another removed item from codebase. [org/repo#123](https://github.com/org/repo/issues/123)
 
 ## [0.0.2] - 2020-01-02
 ### Changed
-- Entry about a changed item to codebase ([org/repo#123](https://github.com/org/repo/issues/123))
+- Entry about a changed item to codebase. [org/repo#123](https://github.com/org/repo/issues/123)
 
 ### Removed
-- Entry about a removed item from codebase ([org/repo#123](https://github.com/org/repo/issues/123))
+- Entry about a removed item from codebase. [org/repo#123](https://github.com/org/repo/issues/123)
 
 ## [0.0.1] - 2020-01-02
 ### Added
-- Added initial functionality foo ([org/repo#123](https://github.com/org/repo/issues/123))
+- Added initial functionality foo. [org/repo#123](https://github.com/org/repo/issues/123)
 
 [Unreleased]: https://github.com/org/repo/compare/v0.2.0...HEAD
 [0.0.2]: https://github.com/org/repo/compare/v0.0.1...v0.0.2
@@ -222,8 +222,8 @@ but don't needlessly avoid mutli-line entries.
 issue as a trailing fully-expanded link so that cross-referencing can be easily done. The
 line below shows an example of an issue-linked changelog entry:
 ```markdown
-- Fix support for using deployment as K8s authentication resource type for Kubernetes >= 1.16
-  ([cyberark/conjur#1440](https://github.com/cyberark/conjur/issues/1440))
+- Fix support for using deployment as K8s authentication resource type for Kubernetes >= 1.16.
+  [cyberark/conjur#1440](https://github.com/cyberark/conjur/issues/1440)
 ```
 
 Some more information about general changelog maintenance can also be found [here](https://depfu.com/blog/what-makes-a-good-changelog)
@@ -235,34 +235,38 @@ To put this all together, below are a few examples of good and bad changelog ent
 ```markdown
 ...
 # Exclude documentation
-- Made links in docs use markdown format
+- Made links in docs use markdown format.
 
 # Irrelevant to end-user
-- Added editor tempfiles to `.gitignore`
+- Added editor tempfiles to `.gitignore`.
 
 # Lacking granularity and no issue link
-- Fixed issue with dependencies of the project
+- Fixed issue with dependencies of the project.
 
 # Irrelevant to end-user
-- Added more tests around API connectivity ([#123](https://github.com/org/repo/issues/123))
+- Added more tests around API connectivity. [#123](https://github.com/org/repo/issues/123)
 
 # Bad issue links
-- Added FIPS compatibility to the agent (#123)
-- Added FIPS compatibility to the agent (org/repo#123)
-- Added FIPS compatibility to the agent ([#123](org/repo#123))
-- Added FIPS compatibility to the agent ([org/repo#123](#123))
+- Added FIPS compatibility to the agent. #123
+- Added FIPS compatibility to the agent. org/repo#123
+- Added FIPS compatibility to the agent. [#123](org/repo#123)
+- Added FIPS compatibility to the agent. [org/repo#123](#123)
+- Added FIPS compatibility to the agent. ([org/repo#123](#123))
+
+# Missing punctuation
+- Product now supports Kubernetes v1.16
 ...
 ```
 
 **Good entries**:
 ```markdown
 ...
-- Added FIPS compatibility to the agent ([org/repo#123](https://github.com/org/repo/issues/123))
-- Removed `-n` flag from the accepted CLI flags ([org/repo#234](https://github.com/org/repo/issues/234))
+- Added FIPS compatibility to the agent. [org/repo#123](https://github.com/org/repo/issues/123)
+- Removed `-n` flag from the accepted CLI flags. [org/repo#234](https://github.com/org/repo/issues/234)
 - Improved performance of main API endpoints with change to
-  a new router `foo` package dependency
-- Fixed CVE-2020-12345 by upgrading `testing` dependency to v3 ([org/repo#345](https://github.com/org/repo/issues/345))
-- Fixed overrides handling of `Client` account param [org/repo#456](https://github.com/org/repo/issues/456)
+  a new router `foo` package dependency. [org/repo#345](https://github.com/org/repo/issues/345)
+- Fixed CVE-2020-12345 by upgrading `testing` dependency to v3. [org/repo#456](https://github.com/org/repo/issues/456)
+- Fixed overrides handling of `Client` account param. [org/repo#567](https://github.com/org/repo/issues/567)
 ...
 ```
 
