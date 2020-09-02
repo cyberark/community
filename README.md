@@ -60,7 +60,7 @@ read up on the contribution guidelines that are specific to each group.
 #### What we do
 At [Conjur Open Source](https://conjur.org/), we’re creating the tools to help you build
 applications safely and securely - without having to be a security expert. From our flagship Conjur
-server (a secret store and RBAC engine), to custom authenticators that make the [secret
+server (a secret store and [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) engine), to custom authenticators that make the [secret
 zero](https://www.conjur.org/blog/avoiding-secret-zero-securely-introducing-secrets-with-conjur/)
 problem a thing of the past, to Secretless Broker, which aims to make sure your apps never have to
 worry about secrets again. 
