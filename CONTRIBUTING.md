@@ -8,8 +8,9 @@ use them when working on any of our public projects, including this one!
 
 * [Where Do I Start?](#where-do-i-start-)
 * [Contribution Workflow](#contribution-workflow)
-   + [Finding Issues to Work On](#finding-issues-to-work-on)
    + [Reporting an Issue](#reporting-an-issue)
+   + [Finding Issues to Work On](#finding-issues-to-work-on)
+   + [Reviewing license requirements](#reviewing-license-requirements)
    + [Working on Issues](#working-on-issues)
    + [Submitting a Pull Request](#submitting-a-pull-request)
    + [Getting Your Code Reviewed](#getting-your-code-reviewed)
@@ -61,7 +62,80 @@ about [how to report a new issue](#reporting-an-issue)!
     This is important to avoid the overlapping of work!
 
 1. If the issue is already in progress, feel free to ask questions or engage in conversation about
-    the implementation. Otherwise, continue on to [working on issues](#working-on-issues).
+    the implementation. Otherwise, review the repository license requirements
+    before starting work and continue on to [working on issues](#working-on-issues).
+
+### Reviewing license requirements
+
+To contribute to any CyberArk open source project, you must make sure you've met
+our contributor license requirements.
+
+To find out what the project you're interested in requires, refer to the
+`CONTRIBUTING.md` file in the repository.
+
+#### When the Repo Includes the CLA
+
+If the `CONTRIBUTING.md` document indicates that you need to sign the CLA, for example:
+
+> "Thanks for your interest in Conjur. Before contributing, please take a moment to read and sign
+> our Contributor Agreement. This provides patent protection for all Conjur users and allows
+> CyberArk to enforce its license terms. Please email a signed copy to <oss@cyberark.com>."
+
+Then you **must** submit a signed copy of the CLA to <oss@cyberark.com> in order
+for your contribution to be merged.
+
+A copy of the CLA can be found [here](/documents/CyberArk_Open_Source_Contributor_Agreement.pdf).
+
+#### When the Repo Does Not Include the CLA
+
+If the repo does not ask you to sign the CLA, then you may do one of the following:
+
+-  Follow the above instructions for [signing the CLA](#when-the-repo-includes-the-cla).
+
+**OR**
+
+-  Sign your commits using the `--signoff` flag in the `git` CLI (more info
+   [here](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s)) to certify that you
+   have the rights to submit the work under the same license as the project and you agree to a
+   Developer Certificate of Origin (see http://developercertificate.org/ for more information).
+
+##### Signing Off a Commit
+
+When signing, every commit must be signed, and your PR will not be approved until this is the case.
+
+To sign-off, use:
+```
+git commit --signoff
+```
+or
+```
+git commit -s
+```
+
+Alternatively, if you have already made the commit, you may use:
+```
+git commit --amend --signoff
+```
+or
+```
+git commit --amend -s
+```
+
+After amending a commit, you will need to force-push (`git push -f <branch_name>`)
+to your branch for this to take effect.
+
+> Note: Only repositories licensed under MIT, BSD, or Apache 2.0 are eligible to
+  use the DCO instead of the CLA for community contributions!! **If the repo
+  does not meet this criterion, you _must_ sign the CLA.**
+
+##### Verifying That You Have Signed a Commit
+
+To determine if you **have** signed a commit, look at the commit history in the branch to ensure
+each commit includes a line like:
+
+    Signed-off-by: Jane A Doe <jane@developer.example.org>
+
+This line should include your real name and contact email.
 
 ### Working on Issues
 
@@ -77,7 +151,8 @@ about [how to report a new issue](#reporting-an-issue)!
 1. Run tests as described in the `CONTRIBUTING.md` or as outlined in the test stage(s) in the
    `Jenkinsfile`, ensuring they pass.
 
-1. [Commit your changes](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
+1. [Commit your changes](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line), making sure to
+   [sign off on your commits](#signing-off-a-commit).
 
 ### Submitting a Pull Request
 
@@ -89,7 +164,7 @@ about [how to report a new issue](#reporting-an-issue)!
 
 1. [Push your local changes to the remote server](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository).
 
-1. Navigate to Githhub and [open a `Pull Request`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) ("`PR`").
+1. Navigate to GitHub and [open a `Pull Request`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) ("`PR`").
 
 1. Make sure you're requesting a merge into `master` of the upstream project from your fork.
 

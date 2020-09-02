@@ -13,6 +13,7 @@ questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
 * [Start Contributing](#start-contributing)
   + [Reporting an Issue](#reporting-an-issue)
   + [Contributing to Code](#contributing-to-code)
+    - [Understanding Contributor License Requirements](#understanding-contributor-license-requirements)
     - [Find Something to Work On](#find-something-to-work-on)
     - [Working on Issues](#working-on-issues)
     - [Submitting Pull Requests](#submitting-pull-requests)
@@ -27,11 +28,6 @@ questions, please ask us on [Discourse](https://discuss.cyberarkcommons.org)!
     + [Draft Release Creation](#draft-release-creation)
     + [Pre-release Publishing](#pre-release-publishing)
     + [Release Publishing](#release-publishing)
-  * [Open Source Guidelines](#open-source-guidelines)
-    + [When the Repo Includes the CLA](#when-the-repo-includes-the-cla)
-    + [When the Repo Does Not Include the CLA](#when-the-repo-does-not-include-the-cla)
-      - [Signing Off a Commit](#signing-off-a-commit)
-      - [Verifying That You Have Signed a Commit](#verifying-that-you-have-signed-a-commit)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with
 markdown-toc</a></i></small>
@@ -63,6 +59,21 @@ Please read our general guidelines on [reporting an issue](/CONTRIBUTING.md#repo
 more information
 
 ### Contributing to Code
+
+#### Understanding Contributor License Requirements
+
+To contribute to any CyberArk open source project, you must make sure you've met
+our contributor license requirements.
+
+To find out what the project you're interested in requires, refer to the
+`CONTRIBUTING.md` file in the repository.
+
+If the CONTRIBUTING file says you must sign the CLA, follow the instructions for
+[when the repo includes the CLA](../CONTRIBUTING.md#when-the-repo-includes-the-cla).
+
+If the CONTRIBUTING file _does not_ ask you to sign the CLA, follow the instructions
+for [when the repo does not include the CLA](../CONTRIBUTING.md#when-the-repo-does-not-include-the-cla).
+These instructions will also walk you through how to add a signoff to your git commits.
 
 #### Find Something to Work On
 
@@ -397,68 +408,3 @@ into a full release:
   and click `Publish release`.
 - **Verify the release publishing**. Ensure that the release is visible in the
   `<main_repo_url>/releases`.
-
-## Open Source Guidelines
-
-For the following instructions, please refer to the `CONTRIBUTING.md` document in the repository you
-are working on to determine which steps apply to you.
-
-### When the Repo Includes the CLA
-
-If the `CONTRIBUTING.md` document says you need to sign the CLA, for example:
-
-> "Thanks for your interest in Conjur. Before contributing, please take a moment to read and sign
-> our Contributor Agreement. This provides patent protection for all Conjur users and allows
-> CyberArk to enforce its license terms. Please email a signed copy to oss@cyberark.com."
-
-Then you **must** submit a signed copy of the CLA to oss@cyberark.com in order for your contribution
-to be merged.
-
-A copy of the CLA can be found [here](/documents/CyberArk_Open_Source_Contributor_Agreement.pdf).
-
-### When the Repo Does Not Include the CLA
-
-If the repo does not ask you to sign the CLA, then you may do one of the following:
-
--  Follow the above instructions for [signing the CLA](#when-the-repo-includes-the-cla).
-
-**OR**
-
--  Sign your commits using the `--signoff` flag in the `git` CLI (more info
-   [here](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s)) to certify that you
-   have the rights to submit the work under the same license as the project and you agree to a
-   Developer Certificate of Origin (see http://developercertificate.org/ for more information).
-
-#### Signing Off a Commit
-
-When signing, every commit must be signed, and your PR will not be approved until this is the case.
-
-To sign-off, use:
-
-    git commit --signoff
-or
-
-    git commit -s
-
-Alternatively, if you have already made the commit, you may use:
-
-    git commit --amend --signoff
-or
-
-    git commit --amend -s
-
-After amending a commit, you will need to force-push (`push -f`) to your branch for this to take
-effect.
-
-> Note: Only repositories licensed under MIT, BSD, or Apache 2.0 are eligible to use the DCO instead
-of the CLA for community contributions!!** If the repo does not meet this criteria, you **must**
-sign the CLA.
-
-#### Verifying That You Have Signed a Commit
-
-To determine if you **have** signed a commit, look at the commit history in the branch to ensure
-each commit includes a line like:
-
-    Signed-off-by: Random J Developer <random@developer.example.org>
-
-This line should include your real name and contact email.
