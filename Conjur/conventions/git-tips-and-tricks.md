@@ -192,6 +192,9 @@ and have git check for secrets before every push.
        #!/bin/bash -eu
 
        set -o pipefail
+       
+       # Need this to allow SourceTree to commit. See: https://stackoverflow.com/a/51415687
+       export PATH=/usr/local/bin:$PATH
 
        if ! command -v gitleaks &> /dev/null; then
          echo "ERROR: Gitleaks not installed!"
