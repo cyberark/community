@@ -237,11 +237,11 @@ index 0000000..cc3e837
 --- /dev/null
 +++ b/contains_aws_key
 @@ -0,0 +1 @@
-+MY_SECRET_KEY=FAKEKEYALKJNDNAI
++MY_SECRET_KEY=AKIAIOSFODNN7EXAMPLE
 $ git commit -m "Try to commit a secret"
 {
-  "line": "MY_SECRET_KEY=FAKEKEYALKJNDNAI",
-  "offender": "FAKEKEYALKJNDNAI",
+  "line": "MY_SECRET_KEY=AKIAIOSFODNN7EXAMPLE",
+  "offender": "AKIAIOSFODNN7EXAMPLE",
   "commit": "7d5beda3daae114ce1f42e2cdf30c212cef00zzz0",
   "repo": "testproject",
   "rule": "AWS Client ID",
