@@ -187,7 +187,7 @@ git rebase upstream/master
 
 Review the git logs before publishing these changes to ensure the git history looks as expected:
 ```
-git logs
+git log
 ```
 
 Force push your changes to your remote fork:
