@@ -185,6 +185,11 @@ Rewrite your local branch to replay any commits from your local branch on top of
 git rebase upstream/master
 ```
 
+Review the git logs before publishing these changes to ensure the git history looks as expected:
+```
+git logs
+```
+
 Force push your changes to your remote fork:
 ```
 git push -f origin master
