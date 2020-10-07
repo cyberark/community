@@ -147,6 +147,8 @@ look like this:
 
 ## Rebasing a feature branch off master
 
+### From a branch in the main project
+
 If you are in a feature branch of a repository cloned on your local machine
 ```
 git checkout feature-branch
@@ -164,6 +166,34 @@ git push --force
 
 For more info on rebasing, especially on rebasing vs merging, see
 [here](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
+
+### From a fork
+
+If you are working from a fork, then from the command line in the root directory of the project on
+your local machine, set the upstream:
+```
+git remote add upstream https://github.com/org/repo
+```
+
+Fetch all the branches of the remote upstream project:
+```
+git fetch upstream
+```
+
+Rewrite your local branch to replay any commits from your local branch on top of the `upstream/master`:
+```
+git rebase upstream/master
+```
+
+Review the git logs before publishing these changes to ensure the git history looks as expected:
+```
+git log
+```
+
+Force push your changes to your remote fork:
+```
+git push -f origin master
+```
 
 ## Preventing Leaks
 
