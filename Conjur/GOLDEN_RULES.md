@@ -185,7 +185,7 @@ _Discussion:_
 We don't want to lose security updates to achieve this.  We want a solution
 that both maintains this invariant and allows or enforces frequent security
 updates, works with vulnerability scanners, and so on.  All of these could
-be encorced at the CI level without giving up pinning.
+be enforced at the CI level without giving up pinning.
 
 ## 8. Best practices must be documented for common tasks
 
@@ -226,7 +226,7 @@ Tools are much, much costlier than they first appear.
 - Prefer simple and well-known solutions.
 - Prefer the standard library to third party solutions.
 - Even junior developers should be able to understand our code easily.
-- If you think a new tool _is_ justified, raise it publicly in Slack.
+- If you think a new tool _is_ justified, raise it publicly.
  
   If other developers agree, document the decision and the reasons for
   making it in the `README.md`, a `DESIGN.md`, a `TOOL.md` or another
@@ -277,8 +277,6 @@ expertise_ should strongly inform decisions to add new tools and languages.
 - References:
     - ["Choose Boring
       Technology"](https://mcfunley.com/choose-boring-technology)
-    - Prior dicussion: [Slack thread about
-      article](https://conjurhq.slack.com/archives/C2D7A1P5J/p1586221275033700)
 
 ## 10. Avoid overengineering: Solve only your immediate problem
 
