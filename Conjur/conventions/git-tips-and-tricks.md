@@ -207,11 +207,9 @@ and have git check for secrets before every push.
 1. Install gitleaks
 
        brew install gitleaks
-       # OR docker pull zricethezav/gitleaks
        # OR go get -u github.com/zricethezav/gitleaks
 
-   Gitleaks version 3.0 or later is required as the config file format changed in version 2 and 3.0+
-   is required for pre-commit verification
+   Gitleaks version 7.1.0 or later is required
 
 2. Configure hooksPath in user git configuration (~/.gitconfig)
 
@@ -219,39 +217,38 @@ and have git check for secrets before every push.
        hooksPath = ~/git-hooks
 3. Create ~/git-hooks/pre-commit and add the following:
 
-       #!/bin/bash -eu
+```sh
+#!/bin/bash -eu
 
-       set -o pipefail
-       
-       # Need this to allow SourceTree to commit. See: https://stackoverflow.com/a/51415687
-       export PATH=/usr/local/bin:$PATH
+set -o pipefail
 
-       if ! command -v gitleaks &> /dev/null; then
-         echo "ERROR: Gitleaks not installed!"
-         exit 1
-       fi
+if ! command -v gitleaks &> /dev/null; then
+  echo "ERROR: Gitleaks not installed!"
+  exit 1
+fi
 
-       # Provide an escape hatch (for example committing gitleaks config files that contain offending strings)
-       if [[ "${SKIP_GITLEAKS:-NO}" == "YES" ]]; then
-         echo SKIPPING GIT LEAKS AS ENV VAR IS SET
-         exit 0
-       fi
+# Provide an escape hatch (for example committing gitleaks config files that contain offending strings)
+if [[ "${SKIP_GITLEAKS:-NO}" != "NO" ]]; then
+  echo SKIPPING GIT LEAKS AS ENV VAR IS SET
+  exit 0
+fi
 
-       # Provide a helpful error message for repos with no commits
-       if ! git rev-parse HEAD &> /dev/null; then
-         echo "It looks like this repo has just been initialised and has no commits.
-       Gitleaks requires at least one commit to exist in the repo.
-       Please create an empty root commit:
-           git reset; SKIP_GITLEAKS=YES git commit --allow-empty -m initial
-       then add and commit your code."
-         exit 1
-       fi
+# Provide a helpful error message for repos with no commits
+if ! git rev-parse HEAD &> /dev/null; then
+  echo "It looks like this repo has just been initialised and has no commits.
+Gitleaks requires at least one commit to exist in the repo.
+Please create an empty root commit:
+    git reset; SKIP_GITLEAKS=YES git commit --allow-empty -m initial
+then add and commit your code."
+  exit 1
+fi
 
-       if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
-         gitleaks -v --uncommitted --pretty --config=$(git rev-parse --show-toplevel)/.gitleaks.toml
-       else
-         gitleaks -v --uncommitted --pretty
-       fi
+if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
+  gitleaks -v --leaks-exit-code=1 --config=$(git rev-parse --show-toplevel)/.gitleaks.toml
+else
+  gitleaks -v --leaks-exit-code=1
+fi
+```
 
 4. Make it executable with the following command:
 
@@ -290,8 +287,8 @@ WARN[2019-11-25T16:02:28-06:00] 1 leaks detected in staged changes
 </details>
 <br>
 
-Please test your configuration against the conjurinc/playroom repo using a dummy secret such as
-`AKIAIOSFODNN7EXAMPLE` which should be recognised as an AWS key.
+Please test your configuration against the conjurinc/playroom repo by attempting to commit 
+`AKIAIOSFODNN7EXAMPLE` in a text file, which should be recognised as an AWS key.
 
 #### Alternative Hook Configuration: Template Directory
 The `core.hooksPath` method works when its safe to apply a single set of hooks to every clone. If
