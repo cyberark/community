@@ -244,7 +244,7 @@ then add and commit your code."
 fi
 
 if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
-  gitleaks -v --leaks-exit-code=1 --config=$(git rev-parse --show-toplevel)/.gitleaks.toml
+  gitleaks -v --leaks-exit-code=1 --config-path=$(git rev-parse --show-toplevel)/.gitleaks.toml
 else
   gitleaks -v --leaks-exit-code=1
 fi
