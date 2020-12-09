@@ -207,7 +207,6 @@ and have git check for secrets before every push.
 1. Install gitleaks
 
        brew install gitleaks
-       # OR go get -u github.com/zricethezav/gitleaks
 
    Gitleaks version 7.1.0 or later is required
 
