@@ -298,7 +298,7 @@ approach is that if you update the scripts in the template dir, each clone will 
 updated.
 
 #### Custom Gitleaks Config
-If you need to whitelist certain paths or commits:
+If you need to exclude certain paths or commits:
 1.  copy [gitleaks.toml](https://github.com/zricethezav/gitleaks/blob/master/gitleaks.toml) and add
     it to your repository. Note that the curl method will retrieve an up to date rule set, using
     `gitleaks --sample-config` may lead to out of date patterns being used.
@@ -311,10 +311,10 @@ If you need to whitelist certain paths or commits:
          "(.*?)(jpg|gif|doc|pdf|bin)$",
          ".gitleaks.toml"
        ]
-1. Add any other paths, commits or patterns you need to whitelist
+1. Add any other paths, commits or patterns you need to exclude
 
-    Note that it is possible to whitelist certain patterns. This option should be chosen over
-    whitelisting paths, so that path can still be scanned in future.
+    Note that it is possible to exclude patterns. This option should be chosen over
+    excluding paths, so that if other secrets are leaked into the same file(s) in future, they will be caught.
 
        [whitelist]
        regexes = [
