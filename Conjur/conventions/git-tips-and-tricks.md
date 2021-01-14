@@ -206,54 +206,83 @@ and have git check for secrets before every push.
 
 1. Install gitleaks
 
-       brew install gitleaks
+    ```sh
+    brew install gitleaks
+    ```
+    Gitleaks version 7.1.0 or later is required
 
-   Gitleaks version 7.1.0 or later is required
+1. Configure hooksPath in user git configuration
+    ```sh
+    vi  ~/.gitconfig
+    ```
+    ```ini
+    [core]
+        hooksPath = ~/git-hooks
+    ```
 
-2. Configure hooksPath in user git configuration (~/.gitconfig)
+1. Create pre-commit hook:
 
-       [core]
-       hooksPath = ~/git-hooks
-3. Create ~/git-hooks/pre-commit and add the following:
+    ```sh
+    mkdir ~/git-hooks/
+    vi ~/git-hooks/pre-commit
+    ```
+    Add the following:
+    ```sh
+    #!/bin/bash -eu
 
-```sh
-#!/bin/bash -eu
+    set -o pipefail
 
-set -o pipefail
+    if ! command -v gitleaks &> /dev/null; then
+      echo "ERROR: Gitleaks not installed!"
+      exit 1
+    fi
 
-if ! command -v gitleaks &> /dev/null; then
-  echo "ERROR: Gitleaks not installed!"
-  exit 1
-fi
+    # Provide an escape hatch (for example committing gitleaks config files that contain offending strings)
+    if [[ "${SKIP_GITLEAKS:-NO}" != "NO" ]]; then
+      echo SKIPPING GIT LEAKS AS ENV VAR IS SET
+      exit 0
+    fi
 
-# Provide an escape hatch (for example committing gitleaks config files that contain offending strings)
-if [[ "${SKIP_GITLEAKS:-NO}" != "NO" ]]; then
-  echo SKIPPING GIT LEAKS AS ENV VAR IS SET
-  exit 0
-fi
+    # Provide a helpful error message for repos with no commits
+    if ! git rev-parse HEAD &> /dev/null; then
+      echo "It looks like this repo has just been initialised and has no commits.
+    Gitleaks requires at least one commit to exist in the repo.
+    Please create an empty root commit:
+        git reset; SKIP_GITLEAKS=YES git commit --allow-empty -m initial
+    then add and commit your code."
+      exit 1
+    fi
 
-# Provide a helpful error message for repos with no commits
-if ! git rev-parse HEAD &> /dev/null; then
-  echo "It looks like this repo has just been initialised and has no commits.
-Gitleaks requires at least one commit to exist in the repo.
-Please create an empty root commit:
-    git reset; SKIP_GITLEAKS=YES git commit --allow-empty -m initial
-then add and commit your code."
-  exit 1
-fi
+    if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
+      gitleaks -v --leaks-exit-code=1 --config-path=$(git rev-parse --show-toplevel)/.gitleaks.toml
+    else
+      gitleaks -v --leaks-exit-code=1
+    fi
+    ```
 
-if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
-  gitleaks -v --leaks-exit-code=1 --config-path=$(git rev-parse --show-toplevel)/.gitleaks.toml
-else
-  gitleaks -v --leaks-exit-code=1
-fi
-```
+1. Make it executable with the following command:
 
-4. Make it executable with the following command:
+    ```sh
+    sudo chmod +x ~/git-hooks/pre-commit
+    ```
+    NOTE: If you had a previous gitleaks setup with pre-push, remove that script now:
 
-        sudo chmod +x ~/git-hooks/pre-commit
-5. If you had a previous gitleaks setup with pre-push, remove that script now: rm
-        ~/git-hooks/pre-push
+    ```sh
+    rm ~/git-hooks/pre-push
+    ```
+1. Test
+    ```sh
+    mkdir ~/gitleaks-test
+    cd ~/gitleaks-test
+    git init
+    SKIP_GITLEAKS=YES git commit --allow-empty -m initial
+    echo 'AKIAIOSFODNN7EXAMPLE' > test.txt
+    git add test.txt
+    git commit -m "gitleaks test"
+    cd ~
+    rm -rf ~/gitleaks-test
+    ```
+    And you're done! :)
 
 <details><summary>Example commit that contains an AWS key</summary>
 Note: AWS key is one that is in the exceptions list for the docs repository
@@ -286,10 +315,9 @@ WARN[2019-11-25T16:02:28-06:00] 1 leaks detected in staged changes
 </details>
 <br>
 
-Please test your configuration against the conjurinc/playroom repo by attempting to commit 
-`AKIAIOSFODNN7EXAMPLE` in a text file, which should be recognised as an AWS key.
+## Alternative Configurations
 
-#### Alternative Hook Configuration: Template Directory
+#### Template Directory
 The `core.hooksPath` method works when its safe to apply a single set of hooks to every clone. If
 you need to maintain custom hooks for specific repos, then you can use a [template
 directory](https://git-scm.com/docs/git-init#_template_directory) instead. This will provide each
