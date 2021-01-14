@@ -279,6 +279,8 @@ and have git check for secrets before every push.
     echo 'AKIAIOSFODNN7EXAMPLE' > test.txt
     git add test.txt
     git commit -m "gitleaks test"
+    #THIS SHOULD FAIL WITH A GITLEAKS ERROR, please proceed if so
+    #if it does not, please double check the previous steps
     cd ~
     rm -rf ~/gitleaks-test
     ```
