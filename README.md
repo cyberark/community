@@ -87,19 +87,22 @@ dropdown below to view and browse them!
 <details>
   <Summary> View Projects </summary>
 
-Name                                              | Description
-----                                              | -----------
-[ACLight](https://github.com/cyberark/ACLight)    | A script for advanced discovery of Privileged Accounts - includes Shadow Admins.
-[KubiScan](https://github.com/cyberark/KubiScan)  | A tool to scan Kubernetes cluster for risky permissions.
-[RiskySPN](https://github.com/cyberark/RiskySPN)  | Detect and abuse risky SPNs     
-[zBang](https://github.com/cyberark/zBang)        | zBang is a risk assessment tool that detects potential privileged account threats.
-[shimit](https://github.com/cyberark/shimit)      | A tool that implements the Golden SAML attack
-[ketshash](https://github.com/cyberark/ketshash)  | A little tool for detecting suspicious privileged NTLM connections, in particular Pass-The-Hash attack, based on event viewer logs.    
-[SkyArk](https://github.com/cyberark/SkyArk)      | SkyArk helps to discover, assess and secure the most privileged entities in Azure and AWS.
-[DLLSpy](https://github.com/cyberark/DLLSpy)      | DLL Hijacking Detection Tool 
-[EasyPeasy](https://github.com/cyberark/EasyPeasy)| Find accounts using common and default passwords in Active Directory. 
-[Mystique](https://github.com/cyberark/Mystique)  | PowerShell module to play with Kerberos S4U extensions.
-[PreCog](https://github.com/cyberark/PreCog)      | Discover "HotSpots" - potential spots for credentials theft.
-[NetRay](https://github.com/cyberark/NetRay)      | A modular, python tool that detects attacks against the Kerberos protocol. 
-[KDSnap](https://github.com/cyberark/KDSnap)      | KDSnap is a DLL extension for WinDbg that integrates your debugger with your virtualization platform of choice.
+Name                                                 | Description
+----                                                 | -----------
+[ACLight](https://github.com/cyberark/ACLight)       | A script for advanced discovery of Privileged Accounts - includes Shadow Admins.
+[BlobHunter](https://github.com/cyberark/blobhunter) | A tool for finding exposed data in Azure Blob Storage.
+[DLLSpy](https://github.com/cyberark/DLLSpy)         | DLL Hijacking Detection Tool 
+[EasyPeasy](https://github.com/cyberark/EasyPeasy)   | Find accounts using common and default passwords in Active Directory. 
+[KDSnap](https://github.com/cyberark/KDSnap)         | KDSnap is a DLL extension for WinDbg that integrates your debugger with your virtualization platform of choice.
+[ketshash](https://github.com/cyberark/ketshash)     | A little tool for detecting suspicious privileged NTLM connections, in particular Pass-The-Hash attack, based on event viewer logs.
+[Kubeletctl](https://github.com/cyberark/Kubeletctl) | A command line tool that implement kubelet's API.
+[KubiScan](https://github.com/cyberark/KubiScan)     | A tool to scan Kubernetes cluster for risky permissions.
+[Mystique](https://github.com/cyberark/Mystique)     | PowerShell module to play with Kerberos S4U extensions.
+[NetRay](https://github.com/cyberark/NetRay)         | A modular, python tool that detects attacks against the Kerberos protocol. 
+[PreCog](https://github.com/cyberark/PreCog)         | Discover "HotSpots" - potential spots for credentials theft.
+[RiskySPN](https://github.com/cyberark/RiskySPN)     | Detect and abuse risky SPNs     
+[shimit](https://github.com/cyberark/shimit)         | A tool that implements the Golden SAML attack
+[SkyArk](https://github.com/cyberark/SkyArk)         | SkyArk helps to discover, assess and secure the most privileged entities in Azure and AWS.
+[SkyWrapper](https://github.com/cyberark/SkyWrapper) | A tool for discovering suspicious creation forms and uses of temporary tokens in AWS.
+[zBang](https://github.com/cyberark/zBang)           | zBang is a risk assessment tool that detects potential privileged account threats.
 </details>
