@@ -45,7 +45,7 @@ first issue, to learning best practices surrounding the languages we use.
 - **Blog** ([blog.conjur.org](blog.conjur.org)) - CyberArk's DevOps security blog.
 
 - **Certification Levels** - Our library of open source tools include community-contributed
-  projects, tools and integrations built for Conjur OSS, and products that have undergone
+  projects, tools and integrations built for Conjur Open Source, and products that have undergone
   additional testing and validation to ensure they work well with [CyberArk Dynamic Access
   Provider](https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-DAP/Latest/en/Content/Resources/_TopNav/cc_Home.htm).
   Read up on our software [**Certification Levels**](./conventions/certification-levels.md)
