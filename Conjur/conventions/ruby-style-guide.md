@@ -149,7 +149,11 @@ as we refine and hone our Ruby knowledge base.
   )
   ```
   
-- Use memoization when you need to run an "expensive operation" more than onceand are sure that it's safe to cache the output (DB queries, API requests, etc..). Use the '||=' construct -- this is the idiomatic pattern for memoization in ruby. Unless there is a naming conflict, name your instance variable (eg, `@my_method`) after your method (eg, `my_method`).
+- Use memoization when you need to run an "expensive operation" more than once
+  and are sure that it's safe to cache the output (DB queries, API requests,
+  etc..). Use the '||=' construct -- this is the idiomatic pattern for
+  memoization in ruby. Unless there is a naming conflict, name your instance
+  variable (eg, `@my_method`) after your method (eg, `my_method`).
 
   ```ruby
   def identity_role
@@ -159,16 +163,29 @@ as we refine and hone our Ruby knowledge base.
     )
   end
   ```
+  - Do not overuse memoization.  If fetching a value is not expensive, don't
+    introduce a new memoized method to wrap it.  Instead, just call the
+    original method in multiple places: `@some_object.fast_in_memory_method`.
+    This will help avoid a proliferation of unnecessary methods.
 
-- For the special case when the value being memoized is boolean, the above method won't work. That's because both `nil` and `false` evaluate to false, so the `||=` pattern can't distinguish between an uninitialized value and and already initialized value that happens to be `false`. For this case we suggest the following explicit check:
+  - For the special case when the value being memoized is boolean, the above
+    method won't work.  That's because both `nil` and `false` evaluate to
+    false, so the `||=` pattern can't distinguish between an uninitialized
+    value and already initialized value that happens to be `false`. 
 
-  ```ruby
-  def identity_available?
-    return @identity_available if [true, false].include?(@identity_available)
-  
-    @identity_available = username_exists?
-  end
-  ```
+    In most cases, you should not need to memoize a boolean value.  Reconsider
+    your design if you do.  There may be an object you can memoize instead.
+
+    If you absolutely have to, though, case we suggest the following explicit
+    check:
+
+        ```ruby
+        def identity_available?
+          return @identity_available if [true, false].include?(@identity_available)
+        
+          @identity_available = username_exists?
+        end
+        ```
 
 - A command class should never call new on anything besides a value object. If it needs to do that, the “already -new’d” thing should have been passed in to begin with.  Related to this: value object classes are not dependencies and can be referred to directly. So they will never need to be passed in.
 
@@ -187,6 +204,16 @@ as we refine and hone our Ruby knowledge base.
         inputs: %i[vendor_configuration authenticator_input]
       ) do
   ```
+
+- Avoid overriding code climate violations.  Especially with reek violations, 
+  code that seems to be "an exception to the rule" may indicate a deeper design
+  problem, often in surrounding, higher-level code.
+
+  That said, sometimes there is a legitimate reason to override a rule.  When
+  you believe you've found one, use a inline "ignore" directive (this isn't
+  possible for all code climate plugins but is for many), and above that add
+  the reason for the exception.  Your code reviewer should verify the reason
+  makes sense and that there is no other solution.
 
 ## Testing
 - **rspec guidelines** ([Better Specs](http://www.betterspecs.org/)) - Best practices for developing
