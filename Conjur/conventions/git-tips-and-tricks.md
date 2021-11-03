@@ -263,7 +263,7 @@ and have git check for secrets before every push.
 1. Make it executable with the following command:
 
     ```sh
-    sudo chmod +x ~/git-hooks/pre-commit
+    chmod +x ~/git-hooks/pre-commit
     ```
     NOTE: If you had a previous gitleaks setup with pre-push, remove that script now:
 
