@@ -224,42 +224,9 @@ and have git check for secrets before every push.
 
     ```sh
     mkdir ~/git-hooks/
-    vi ~/git-hooks/pre-commit
+    curl https://raw.githubusercontent.com/zricethezav/gitleaks/master/scripts/pre-commit.py > ~/git-hooks/pre-commit
     ```
-    Add the following:
-    ```sh
-    #!/bin/bash -eu
-
-    set -o pipefail
-
-    if ! command -v gitleaks &> /dev/null; then
-      echo "ERROR: Gitleaks not installed!"
-      exit 1
-    fi
-
-    # Provide an escape hatch (for example committing gitleaks config files that contain offending strings)
-    if [[ "${SKIP_GITLEAKS:-NO}" != "NO" ]]; then
-      echo SKIPPING GIT LEAKS AS ENV VAR IS SET
-      exit 0
-    fi
-
-    # Provide a helpful error message for repos with no commits
-    if ! git rev-parse HEAD &> /dev/null; then
-      echo "It looks like this repo has just been initialised and has no commits.
-    Gitleaks requires at least one commit to exist in the repo.
-    Please create an empty root commit:
-        git reset; SKIP_GITLEAKS=YES git commit --allow-empty -m initial
-    then add and commit your code."
-      exit 1
-    fi
-
-    if git ls-files $(git rev-parse --show-toplevel)| grep -q '.gitleaks.toml' &> /dev/null; then
-      gitleaks -v --leaks-exit-code=1 --config-path=$(git rev-parse --show-toplevel)/.gitleaks.toml
-    else
-      gitleaks -v --leaks-exit-code=1
-    fi
-    ```
-
+ 
 1. Make it executable with the following command:
 
     ```sh
