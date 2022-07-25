@@ -211,10 +211,12 @@ and have git check for secrets before every push.
     ```
     Gitleaks version 7.1.0 or later is required
 
-1. Configure hooksPath in user git configuration
+1. Open `gitconfig` file in a text editor of your choice
     ```sh
     vi  ~/.gitconfig
     ```
+    Set the `hooksPath` key under the `core` section in the `gitconfig` file as shown below.
+    If you don't have the `core` section already defined just copy and paste the content below into your `gitconfig` file.
     ```ini
     [core]
         hooksPath = ~/git-hooks
@@ -242,7 +244,7 @@ and have git check for secrets before every push.
     mkdir ~/gitleaks-test
     cd ~/gitleaks-test
     git init
-    SKIP_GITLEAKS=YES git commit --allow-empty -m initial
+    git commit --allow-empty -m initial
     echo 'AKIAIOSFODNN7EXAMPLE' > test.txt
     git add test.txt
     git commit -m "gitleaks test"
