@@ -75,7 +75,7 @@ our community:
 * Posting or displaying sexually explicit or violent material.
 * Posting or threatening to post other people’s personally identifying
   information ("doxing").
-* Personal insults, particularly those related to related to gender identity,
+* Personal insults, particularly those related to gender identity,
   sexual orientation, ability, ethnicity, religion, age, physical appearance,
   body size, race, or similar personal characteristics.
 * Inappropriate photography or recording.
