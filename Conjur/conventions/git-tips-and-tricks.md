@@ -245,11 +245,14 @@ and have git check for secrets before every push.
     cd ~/gitleaks-test
     git init
     git commit --allow-empty -m initial
-    echo 'AKIAIOSFODNN7EXAMPLE' > test.txt
+    echo 'password = dXNlcm5hbWU6c3VwZXJzZWNyZXQ=' > test.txt
     git add test.txt
     git commit -m "gitleaks test"
-    #THIS SHOULD FAIL WITH A GITLEAKS ERROR, please proceed if so
-    #if it does not, please double check the previous steps
+    #You should see a message that says that one leak was found and please proceed if so
+    #if no leaks are found, please double check the previous steps
+    ```
+1. Cleanup
+    ```
     cd ~
     rm -rf ~/gitleaks-test
     ```
